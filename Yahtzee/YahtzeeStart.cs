@@ -6,11 +6,8 @@ namespace Yahtzee
 {
 	public partial class YahtzeeStart : Form
 	{
-<<<<<<< HEAD
-		int amountOfPlayers;
-=======
+
 		private int amountOfPlayers;
->>>>>>> yahtzeeUpstream/master
 
 		public YahtzeeStart()
 		{
@@ -21,14 +18,12 @@ namespace Yahtzee
 		{
 			if (Int32.TryParse(numberInput.Text, out amountOfPlayers)) //Als je geen geldig nummer intypt, speel je alleen.
 			{
-				if (amountOfPlayers > 5)
-				{ //Max. aantal spelers is 5
+				if (amountOfPlayers > 5) { //Max. aantal spelers is 5
 					amountOfPlayers = 5;
 				}
 				amntLabel.Text = "You have chosen " + amountOfPlayers + " player(s).";
 			}
-			else
-			{
+			else {
 				amountOfPlayers = 1;
 				amntLabel.Text = "You have chosen " + amountOfPlayers + " player.";
 			}
@@ -36,23 +31,14 @@ namespace Yahtzee
 			for (int i = 0; i < amountOfPlayers; i++)
 			{
 				YahtzeeController controller = new YahtzeeController();
-<<<<<<< HEAD
 				//controller.model.AantalTeerlingen = amountOfDice; //Waarschijnlijk nutteloos als we met echte scoresysteem gaan werken.
 
 				//ShowPlayerScores();
 			}
 		}
 
-=======
+		
 
-				//controller.model.AantalTeerlingen = amountOfDice; //Waarschijnlijk nutteloos als we met echte scoresysteem gaan werken.
-
-				//ShowPlayerScores();
-			}
-			this.Hide();
-		}
-
->>>>>>> yahtzeeUpstream/master
 		public void ShowPlayerScores() //Moet naar controller van ScoreboardGlobalPlayer
 		{
 			//int[] players = new int[amountOfPlayers];
@@ -66,9 +52,5 @@ namespace Yahtzee
 				Size = new Size(Size.Width, Size.Width);
 			}
 		}
-<<<<<<< HEAD
-
-=======
->>>>>>> yahtzeeUpstream/master
 	}
 }
