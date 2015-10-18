@@ -2,24 +2,25 @@
 
 namespace Yahtzee
 {
-	
 	public class TeerlingController
 	{
-		static int seed = 0;
-    //member die de view opvangt  
-		private TeerlingView view; 
-		public TeerlingModel model;
-		YahtzeeController yahtzeeController;
-    private int throwns;
+		private static int seed = 0;
 
-    public TeerlingController(int i, YahtzeeController y)
+		//member die de view opvangt
+		private TeerlingView view;
+
+		public TeerlingModel model;
+		private YahtzeeController yahtzeeController;
+		private int throwns;
+
+		public TeerlingController(int i, YahtzeeController y)
 		{
 			view = new TeerlingView(this);
 			model = new TeerlingModel();
 			model.IndexOfTeerling = i;
 			view.SetIndexOfTeerling();
-      yahtzeeController = y;
-      throwns = model.AantalWorpen;
+			yahtzeeController = y;
+			throwns = model.AantalWorpen;
 		}
 
 		public TeerlingView getView()
@@ -29,11 +30,11 @@ namespace Yahtzee
 
 		public void Werp()
 		{
-      throwns++;
-      model.AantalWorpen = throwns;
-      
+			throwns++;
+			model.AantalWorpen = throwns;
+
 			if (!model.Vastgezet)
-      {
+			{
 				//Nieuwe instantie van Random object genereren
 				Random random = new Random(seed++);
 
@@ -44,10 +45,10 @@ namespace Yahtzee
 				model.AantalOgen = aantalOgen;
 			}
 
-      if (throwns ==3)
-      {
-        view.DisableThrow();
-      }
+			if (throwns == 3)
+			{
+				view.DisableThrow();
+			}
 		}
 
 		public void Vastzetten()
@@ -59,7 +60,7 @@ namespace Yahtzee
 
 		public void ScoreChanged()
 		{
-      yahtzeeController.ScoreChanged(model.IndexOfTeerling);
+			yahtzeeController.ScoreChanged(model.IndexOfTeerling);
 		}
 	}
 }

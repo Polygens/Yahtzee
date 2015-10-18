@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Yahtzee
 {
 	public partial class YahtzeeStart : Form
 	{
+<<<<<<< HEAD
 		int amountOfPlayers;
+=======
+		private int amountOfPlayers;
+>>>>>>> yahtzeeUpstream/master
 
 		public YahtzeeStart()
 		{
@@ -38,12 +36,23 @@ namespace Yahtzee
 			for (int i = 0; i < amountOfPlayers; i++)
 			{
 				YahtzeeController controller = new YahtzeeController();
+<<<<<<< HEAD
 				//controller.model.AantalTeerlingen = amountOfDice; //Waarschijnlijk nutteloos als we met echte scoresysteem gaan werken.
 
 				//ShowPlayerScores();
 			}
 		}
 
+=======
+
+				//controller.model.AantalTeerlingen = amountOfDice; //Waarschijnlijk nutteloos als we met echte scoresysteem gaan werken.
+
+				//ShowPlayerScores();
+			}
+			this.Hide();
+		}
+
+>>>>>>> yahtzeeUpstream/master
 		public void ShowPlayerScores() //Moet naar controller van ScoreboardGlobalPlayer
 		{
 			//int[] players = new int[amountOfPlayers];
@@ -57,6 +66,9 @@ namespace Yahtzee
 				Size = new Size(Size.Width, Size.Width);
 			}
 		}
+<<<<<<< HEAD
 
+=======
+>>>>>>> yahtzeeUpstream/master
 	}
 }

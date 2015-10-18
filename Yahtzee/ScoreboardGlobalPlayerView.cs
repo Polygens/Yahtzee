@@ -1,25 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Yahtzee
 {
-  public partial class ScoreboardGlobalPlayerView : UserControl
-  {
-    public ScoreboardGlobalPlayerView()
-    {
-      InitializeComponent();
-    }
+	public partial class ScoreboardGlobalPlayerView : UserControl
+	{
+		public ScoreboardGlobalPlayerView()
+		{
+			InitializeComponent();
+		}
 
-    private void ScoreboardGlobalPlayerView_Load(object sender, EventArgs e)
-    {
-
-    }
-  }
+		private void ScoreboardGlobalPlayerView_Load(object sender, EventArgs e)
+		{
+		}
+	}
 }
