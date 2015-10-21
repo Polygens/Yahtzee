@@ -37,6 +37,11 @@ namespace Yahtzee
 			return scoreboard.getView();
 		}
 
+		public ScoreboardController GetScoreContr()
+		{
+			return scoreboard;
+		}
+
 		public void ScoreChanged(int indexOfTeerling) //Verandert score van één teerling
 		{
 			scoreboard.ChangeScore(indexOfTeerling, teerlingen[indexOfTeerling].model.AantalOgen);
