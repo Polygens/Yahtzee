@@ -32,9 +32,9 @@
 			this.questionPlayerLabel = new System.Windows.Forms.Label();
 			this.startGame = new System.Windows.Forms.Button();
 			this.welcomeLabel = new System.Windows.Forms.Label();
-			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.alignmentTable = new System.Windows.Forms.TableLayoutPanel();
 			this.amntLabel = new System.Windows.Forms.Label();
-			this.tableLayoutPanel1.SuspendLayout();
+			this.alignmentTable.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// numberInput
@@ -80,28 +80,28 @@
 			this.welcomeLabel.TabIndex = 4;
 			this.welcomeLabel.Text = "Welcome to Yahtzee!";
 			// 
-			// tableLayoutPanel1
+			// alignmentTable
 			// 
-			this.tableLayoutPanel1.AutoSize = true;
-			this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.tableLayoutPanel1.ColumnCount = 1;
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel1.Controls.Add(this.welcomeLabel, 0, 0);
-			this.tableLayoutPanel1.Controls.Add(this.numberInput, 0, 1);
-			this.tableLayoutPanel1.Controls.Add(this.startGame, 0, 3);
-			this.tableLayoutPanel1.Controls.Add(this.questionPlayerLabel, 0, 1);
-			this.tableLayoutPanel1.Controls.Add(this.amntLabel, 0, 4);
-			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-			this.tableLayoutPanel1.RowCount = 5;
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 196);
-			this.tableLayoutPanel1.TabIndex = 5;
+			this.alignmentTable.AutoSize = true;
+			this.alignmentTable.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.alignmentTable.ColumnCount = 1;
+			this.alignmentTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.alignmentTable.Controls.Add(this.welcomeLabel, 0, 0);
+			this.alignmentTable.Controls.Add(this.numberInput, 0, 1);
+			this.alignmentTable.Controls.Add(this.startGame, 0, 3);
+			this.alignmentTable.Controls.Add(this.questionPlayerLabel, 0, 1);
+			this.alignmentTable.Controls.Add(this.amntLabel, 0, 4);
+			this.alignmentTable.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.alignmentTable.Location = new System.Drawing.Point(0, 0);
+			this.alignmentTable.Name = "alignmentTable";
+			this.alignmentTable.RowCount = 5;
+			this.alignmentTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.alignmentTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.alignmentTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.alignmentTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.alignmentTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.alignmentTable.Size = new System.Drawing.Size(284, 196);
+			this.alignmentTable.TabIndex = 5;
 			// 
 			// amntLabel
 			// 
@@ -117,11 +117,11 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(284, 196);
-			this.Controls.Add(this.tableLayoutPanel1);
+			this.Controls.Add(this.alignmentTable);
 			this.Name = "YahtzeeStart";
 			this.Text = "Yahtzee";
-			this.tableLayoutPanel1.ResumeLayout(false);
-			this.tableLayoutPanel1.PerformLayout();
+			this.alignmentTable.ResumeLayout(false);
+			this.alignmentTable.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -132,7 +132,7 @@
     private System.Windows.Forms.Label questionPlayerLabel;
     private System.Windows.Forms.Button startGame;
     private System.Windows.Forms.Label welcomeLabel;
-		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+		private System.Windows.Forms.TableLayoutPanel alignmentTable;
 		private System.Windows.Forms.Label amntLabel;
 	}
 }

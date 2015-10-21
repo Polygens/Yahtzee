@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace Yahtzee
 {
@@ -12,14 +13,22 @@ namespace Yahtzee
 			controller = c;
 		}
 
-		public void ChangeScore()
+
+		private void scoresheetClick(object sender, System.EventArgs e)
 		{
-			lblScore.Text = "Score: " + controller.model.Score;
+			System.Windows.Forms.Control tempLbl;
+			tempLbl = (Control)sender;
+			//MessageBox.Show(tempLbl.Name);
+			controller.ClickCategory(tempLbl.Name);
+			tempLbl.BackColor = Color.Beige;
+			tempLbl.Click -= scoresheetClick;
 		}
 
-		public void ChangeHighscore()
+		public void SetText(string name, int points)
 		{
-			lblHighscore.Text = "Highscore: " + controller.model.Highscore;
-		}
+			Control ctn = Scoresheet.Controls[name];
+			ctn.Text = points.ToString();
+			
+        }
 	}
 }
