@@ -151,7 +151,7 @@
 			System.Array.Clear(model.DiceCount,0,model.DiceCount.Length);
 			for (int i = 0; i < model.Numbers.Length; i++)
 			{
-				model.DiceCount[model.Numbers[i]]++;
+				model.DiceCount[model.Numbers[i]-1]++;
 			}
 			System.Array.Sort(model.DiceCount);
 		}
