@@ -51,6 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ScoreboardController.cs" />
+    <Compile Include="ScoreboardGlobalPlayerController.cs" />
+    <Compile Include="ScoreboardGlobalPlayerModel.cs" />
     <Compile Include="ScoreboardGlobalPlayerView.cs">
       <SubType>UserControl</SubType>
     </Compile>
