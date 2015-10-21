@@ -35,8 +35,12 @@ namespace Yahtzee
 
 				//controller.model.AantalTeerlingen = amountOfDice; //Waarschijnlijk nutteloos als we met echte scoresysteem gaan werken.
 
-				ShowPlayerScores();
+				
 			}
+
+
+
+
 		}
 
 		public void ShowPlayerScores() //Moet naar controller van ScoreboardGlobalPlayer
@@ -49,6 +53,7 @@ namespace Yahtzee
 				ScoreboardGlobalPlayerView scoreboardView = new ScoreboardGlobalPlayerView();
 				scoreboardView.Location = new System.Drawing.Point(i * scoreboardView.Width, 150);
 				alignmentTable.Controls.Add(scoreboardView);
+
 				Size = new Size(Size.Width, Size.Width);
 			}
 		}

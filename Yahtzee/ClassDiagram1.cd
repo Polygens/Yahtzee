@@ -14,17 +14,10 @@
       <FileName>ScoreboardGlobalPlayerView.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Yahtzee.ScoreboardModel" Collapsed="true">
-    <Position X="9" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>DAAiQgQAIgAUAgwgEAYOIgBEBgAESAQABAgAAAwAAEA=</HashCode>
-      <FileName>ScoreboardModel.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Yahtzee.ScoreboardView" Collapsed="true">
     <Position X="14.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CQAAAAAgJCAgkkEAAICKyAEmRAABAAAIAAJCEqYkGAA=</HashCode>
+      <HashCode>CQAAAAAgJCAgkkEAAICKyAEmRAABAAAIAAJAEoYkGAA=</HashCode>
       <FileName>ScoreboardView.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -56,13 +49,6 @@
       <FileName>Yahtzee.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Yahtzee.YahtzeeController" Collapsed="true">
-    <Position X="5.25" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAEAAAAACIAAAAAAAAIBAAAIAAAAAAQAAAAAIAAA=</HashCode>
-      <FileName>YahtzeeController.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Yahtzee.YahtzeeModel" Collapsed="true">
     <Position X="7" Y="2.75" Width="1.5" />
     <TypeIdentifier>
@@ -77,11 +63,25 @@
       <FileName>YahtzeeStart.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Yahtzee.ScoreboardModel" Collapsed="true">
+    <Position X="9" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAiUgQAIgCUAgwgEAYOIgBEBgCETAQABAgAAAwAAFA=</HashCode>
+      <FileName>ScoreboardModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="Yahtzee.ScoreboardController" Collapsed="true">
     <Position X="12.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAAQAAACAKAAQ=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAQQEAAQEAACAKAAQ=</HashCode>
       <FileName>ScoreboardController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Yahtzee.YahtzeeController" Collapsed="true">
+    <Position X="5.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAACIAAAAAAAAIBAAAIAAAAAAQAAAAAIAAA=</HashCode>
+      <FileName>YahtzeeController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

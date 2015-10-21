@@ -40,6 +40,7 @@ namespace Yahtzee
 		public void ScoreChanged(int indexOfTeerling) //Verandert score van één teerling
 		{
 			scoreboard.ChangeScore(indexOfTeerling, teerlingen[indexOfTeerling].model.AantalOgen);
+
 		}
 
 		public void ScoreChangedAll() //Verandert score van alle teerlingen

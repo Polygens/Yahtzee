@@ -28,6 +28,7 @@
 			get { return ptLStraight; }
 		}
 
+
 		public int Score
 		{
 			get { return score; }
@@ -147,5 +148,6 @@
 			get { return diceCount; }
 			set { diceCount = value; }
 		}
+
 	}
 }
