@@ -12,6 +12,9 @@ namespace Yahtzee
 			InitializeComponent();
 			controller = c;
 			MakeScoreboard();
+			this.Location = new System.Drawing.Point((int)(this.Width * (controller.model.PlayerNumber / 5.0f)), (int)(this.Height * (controller.model.PlayerNumber / 5.0f)));
+			this.StartPosition = FormStartPosition.Manual; //Gebruikt de Location om de startpositie van het scherm te bepalen.
+			this.Text = "Player " + (controller.model.PlayerNumber + 1); 			
 		}
 
 		private void button1_Click(object sender, EventArgs e)

@@ -36,12 +36,12 @@
 			// winLoseLabel
 			// 
 			this.winLoseLabel.AutoSize = true;
-			this.winLoseLabel.Location = new System.Drawing.Point(47, 100);
+			this.winLoseLabel.Location = new System.Drawing.Point(41, 88);
 			this.winLoseLabel.Name = "winLoseLabel";
 			this.winLoseLabel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-			this.winLoseLabel.Size = new System.Drawing.Size(26, 23);
+			this.winLoseLabel.Size = new System.Drawing.Size(41, 23);
 			this.winLoseLabel.TabIndex = 3;
-			this.winLoseLabel.Text = "Win";
+			this.winLoseLabel.Text = "Winner";
 			this.winLoseLabel.Visible = false;
 			// 
 			// lblScore
