@@ -8,10 +8,9 @@ namespace Yahtzee
 {
 	public class ScoreboardGlobalPlayerModel
 	{
-		private int playerNumber = 0;
+		 private int playerNumber = 0;
 		private int score = 0;
 		private bool win = false;
-		private bool playing = true;
 
 		public int PlayerNumber
 		{
@@ -30,13 +29,6 @@ namespace Yahtzee
 			get { return win; }
 			set { win = value; }
 		}
-
-		public bool Playing
-		{
-			get { return playing; }
-			set { playing = value; }
-		}
-
 
 	}
 }

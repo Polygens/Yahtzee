@@ -2,7 +2,9 @@
 {
 	public class YahtzeeModel
 	{
-		private int aantalTeerlingen = 5; //, aantalWorpen = 0;
+		private int aantalTeerlingen = 5;
+		private int playerNumber = 0;
+		private bool playing = true;
 
 		public int AantalTeerlingen
 		{
@@ -10,11 +12,17 @@
 			set { aantalTeerlingen = value; }
 		}
 
-		//public int AantalWorpen
-		//{
-		//  get { return aantalWorpen; }
-		//  set { aantalWorpen = value; }
-		//}  
+		public int PlayerNumber
+		{
+			get { return playerNumber; }
+			set { playerNumber = value; }
+		}
+
+		public bool Playing
+		{
+			get { return playing; }
+			set { playing = value; }
+		}
 
 	}
 }
