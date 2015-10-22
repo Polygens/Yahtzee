@@ -25,7 +25,7 @@ namespace Yahtzee
 			return view;
 		}
 
-		public void KeepingScore() //Moet nog aangehaald worden als de score veranderd dat deze functie ook moet worden opgeroept
+		public void KeepingScore()
 		{
 			int Plnumber = model.PlayerNumber;
 			model.Score = yahtzeeStart.yahtzeeControl[Plnumber].GetScoreContr().model.Score;

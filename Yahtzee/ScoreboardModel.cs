@@ -2,6 +2,7 @@
 {
 	public class ScoreboardModel
 	{
+		private int amntOfRounds;
 		private int[] numbers;
 		private int[] diceCount = new int[6];
 
@@ -147,6 +148,12 @@
 		{
 			get { return diceCount; }
 			set { diceCount = value; }
+		}
+
+		public int AmntOfRounds
+		{
+			get { return amntOfRounds; }
+			set { amntOfRounds = value; }
 		}
 
 	}

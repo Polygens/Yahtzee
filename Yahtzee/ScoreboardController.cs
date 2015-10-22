@@ -6,6 +6,8 @@ namespace Yahtzee
 	{
 		private ScoreboardView view;
 		public ScoreboardModel model;
+		private YahtzeeController yahtzeeController;
+
 
 		private string strThreeOK = @"\3\";
 		private string strFourOK = @"/4/";
@@ -13,10 +15,12 @@ namespace Yahtzee
 		private string strlStraight = @"/1{5}/";
 		private string strsStraight = @"/[12]{4}/";
 
-		public ScoreboardController()
+
+		public ScoreboardController(YahtzeeController y)
 		{
 			view = new ScoreboardView(this);
 			model = new ScoreboardModel();
+			yahtzeeController = y;
 		}
 
 		public ScoreboardView getView()
@@ -122,6 +126,8 @@ namespace Yahtzee
 			}
 			UpdateTotalScores();
 			view.SetText(name, points);
+			model.AmntOfRounds++;   //Even vlug erbij gezet.
+			EndingGame();
 		}
 
 		public int Sum(int eye)
@@ -143,6 +149,8 @@ namespace Yahtzee
 			view.SetText("totalPointsLbl_Lower", model.SubTotal2);
 			model.Score = model.SubTotal1 + model.SubTotal2;
 			view.SetText("totalPointsLbl", model.Score);
+
+			yahtzeeController.startController.scoreboardControl[yahtzeeController.model.PlayerNumber].KeepingScore(); //Gaat via de YahtzeeController en YahtzeeStart naar de globale ScoreboardController om daar de Methode om de Score te Updaten in het YahtzeeStart scherm aan te halen. Elke YahtzeeController heeft een player number en zo weet de YahtzeeStart welke speler de score wilt updaten.
 		}
 
 		public void CheckForBonus()
@@ -174,6 +182,7 @@ namespace Yahtzee
 			return diceTotal;
 		}
 
+
 		public string ArrayToString(int[] array)
 		{
 			string diceString = "";
@@ -183,5 +192,16 @@ namespace Yahtzee
 			}
 			return diceString;
 		}
+
+
+		public void EndingGame()  //Checkt of de spel ten einde is. Even vlug erbij gezet...
+		{
+			if (model.AmntOfRounds == 13) {
+				yahtzeeController.model.Playing = false;
+				yahtzeeController.startController.CheckEndGame();
+			}
+		}
+
+
 	}
 }

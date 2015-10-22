@@ -6,21 +6,25 @@ namespace Yahtzee
 	{
 		private YahtzeeView view;
 		public YahtzeeModel model;
-		private ScoreboardController scoreboard = new ScoreboardController();
+		private ScoreboardController scoreboard;
+		public YahtzeeStart startController;
 
 		private List<TeerlingController> teerlingen = new List<TeerlingController>();
 		private int aantalTeerlingen;
 
-		public YahtzeeController()
+		public YahtzeeController(int plNum, YahtzeeStart ys)
 		{
-			view = new YahtzeeView(this);
-
-			//view.Location = new System.Drawing.Point(view.Width + view.Width, view.Location.Y + view.Location.Y);  //Moet nog verder werken om de schermen op andere plaatsen te laten verschijnen.
-			view.Show();  //Laat form verschijnen
+			scoreboard = new ScoreboardController(this);
 			model = new YahtzeeModel();
-
+			model.PlayerNumber = plNum;
+			view = new YahtzeeView(this);	
+			startController = ys;
+			
+			view.Show();  //Laat form verschijnen
+			
 			aantalTeerlingen = model.AantalTeerlingen;
 			scoreboard.model.Numbers = new int[aantalTeerlingen];
+			
 
 			for (int i = 0; i < aantalTeerlingen; i++)
 			{
@@ -30,6 +34,11 @@ namespace Yahtzee
 				TeerlingView teerlingView = teerlingen[i].getView();
 				view.MakeDice(teerlingView, i);
 			}
+		}
+
+		public YahtzeeView getView()
+		{
+			return view;
 		}
 
 		public ScoreboardView GetScoreView() //Haalt ScoreboardView vanuit ScoreboardController
