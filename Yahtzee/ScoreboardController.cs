@@ -1,9 +1,17 @@
-﻿namespace Yahtzee
+﻿using System.Text.RegularExpressions;
+
+namespace Yahtzee
 {
 	public class ScoreboardController
 	{
 		private ScoreboardView view;
 		public ScoreboardModel model;
+
+		private string strThreeOK = @"\3\";
+		private string strFourOK = @"/4/";
+		private string strFullHouse = @"/20*3|30*2/";
+		private string strlStraight = @"/1{5}/";
+		private string strsStraight = @"/[12]{4}/";
 
 		public ScoreboardController()
 		{
@@ -88,7 +96,8 @@
 					break;
 
 				case "threeOKPointsLbl":
-					if (model.DiceCount[model.DiceCount.Length - 1] >= 3)
+					Regex rgx = new Regex(strThreeOK);
+					if (rgx.Matches(ArrayToString(model.DiceCount)).Count > 0)
 					{
 						model.ThreeOK = CountDiceTotal();
 						model.SubTotal2 += model.ThreeOK;
@@ -148,12 +157,11 @@
 
 		public void CountDice()
 		{
-			System.Array.Clear(model.DiceCount,0,model.DiceCount.Length);
+			System.Array.Clear(model.DiceCount, 0, model.DiceCount.Length);
 			for (int i = 0; i < model.Numbers.Length; i++)
 			{
-				model.DiceCount[model.Numbers[i]-1]++;
+				model.DiceCount[model.Numbers[i] - 1]++;
 			}
-			System.Array.Sort(model.DiceCount);
 		}
 
 		public int CountDiceTotal()
@@ -166,5 +174,14 @@
 			return diceTotal;
 		}
 
+		public string ArrayToString(int[] array)
+		{
+			string diceString = "";
+			for (int i = 0; i < array.Length; i++)
+			{
+				diceString += array[i];
+			}
+			return diceString;
+		}
 	}
 }
