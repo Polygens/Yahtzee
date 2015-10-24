@@ -32,6 +32,7 @@ namespace Yahtzee
       this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
       this.button1 = new System.Windows.Forms.Button();
       this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+      this.refresh = new System.Windows.Forms.Button();
       this.flowLayoutPanel1.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -40,6 +41,7 @@ namespace Yahtzee
       this.flowLayoutPanel1.AutoSize = true;
       this.flowLayoutPanel1.Controls.Add(this.button1);
       this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
+      this.flowLayoutPanel1.Controls.Add(this.refresh);
       this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
       this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
       this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -66,8 +68,17 @@ namespace Yahtzee
       this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
       this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 32);
       this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-      this.flowLayoutPanel2.Size = new System.Drawing.Size(67, 0);
+      this.flowLayoutPanel2.Size = new System.Drawing.Size(75, 0);
       this.flowLayoutPanel2.TabIndex = 0;
+      // 
+      // refresh
+      // 
+      this.refresh.Location = new System.Drawing.Point(3, 38);
+      this.refresh.Name = "refresh";
+      this.refresh.Size = new System.Drawing.Size(75, 23);
+      this.refresh.TabIndex = 1;
+      this.refresh.Text = "Restart";
+      this.refresh.Click += new System.EventHandler(this.refresh_Click);
       // 
       // YahtzeeView
       // 
@@ -90,6 +101,7 @@ namespace Yahtzee
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+    private System.Windows.Forms.Button refresh;
 	}
 }
 

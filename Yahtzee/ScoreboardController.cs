@@ -1,20 +1,10 @@
-﻿using System.Text.RegularExpressions;
-
-namespace Yahtzee
+﻿namespace Yahtzee
 {
 	public class ScoreboardController
 	{
 		private ScoreboardView view;
 		public ScoreboardModel model;
 		private YahtzeeController yahtzeeController;
-
-
-		private string strThreeOK = @"\3\";
-		private string strFourOK = @"/4/";
-		private string strFullHouse = @"/20*3|30*2/";
-		private string strlStraight = @"/1{5}/";
-		private string strsStraight = @"/[12]{4}/";
-
 
 		public ScoreboardController(YahtzeeController y)
 		{
@@ -100,8 +90,7 @@ namespace Yahtzee
 					break;
 
 				case "threeOKPointsLbl":
-					Regex rgx = new Regex(strThreeOK);
-					if (rgx.Matches(ArrayToString(model.DiceCount)).Count > 0)
+					if (model.DiceCount[model.DiceCount.Length - 1] >= 3)
 					{
 						model.ThreeOK = CountDiceTotal();
 						model.SubTotal2 += model.ThreeOK;
@@ -165,11 +154,12 @@ namespace Yahtzee
 
 		public void CountDice()
 		{
-			System.Array.Clear(model.DiceCount, 0, model.DiceCount.Length);
+			System.Array.Clear(model.DiceCount,0,model.DiceCount.Length);
 			for (int i = 0; i < model.Numbers.Length; i++)
 			{
-				model.DiceCount[model.Numbers[i] - 1]++;
+				model.DiceCount[model.Numbers[i]-1]++;
 			}
+			System.Array.Sort(model.DiceCount);
 		}
 
 		public int CountDiceTotal()
@@ -183,17 +173,6 @@ namespace Yahtzee
 		}
 
 
-		public string ArrayToString(int[] array)
-		{
-			string diceString = "";
-			for (int i = 0; i < array.Length; i++)
-			{
-				diceString += array[i];
-			}
-			return diceString;
-		}
-
-
 		public void EndingGame()  //Checkt of de spel ten einde is. Even vlug erbij gezet...
 		{
 			if (model.AmntOfRounds == 13) {
@@ -202,6 +181,28 @@ namespace Yahtzee
 			}
 		}
 
+    // score reseten
+    public void ResetScore()
+    {
+      model.Score = 0;
+      model.Ace = 0;
+      model.Two = 0;
+      model.Three = 0;
+      model.Four = 0;
+      model.Five = 0;
+      model.Six = 0;
+        model.Bonus = 0;
+			model.SubTotal1 = 0;
+      model.ThreeOK = 0;
+      model.FourOK = 0;
+      model.FullHouse = 0;
+      model.SStraight = 0;
+      model.LStraight = 0;
+			model.YahtzeeSc = 0; 
+      model.Chance = 0;
+      model.SubTotal2= 0;
+      view.ChangeText();
+    }
 
 	}
 }
