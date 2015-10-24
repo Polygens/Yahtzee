@@ -58,6 +58,18 @@ namespace Yahtzee
 			model.isBtnVisible = false;
 		}
 
+    public void Losmaken()
+    {
+      model.KleurTeerling = System.Drawing.Color.Black;
+      model.Vastgezet = false;
+      model.isBtnVisible = true;
+      ThrowsToZero();
+    }
+
+    public void ThrowsToZero(){
+      throwns = 0;
+    }
+
 		public void ScoreChanged()
 		{
 			yahtzeeController.ScoreChanged(model.IndexOfTeerling);

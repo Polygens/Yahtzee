@@ -34,5 +34,12 @@ namespace Yahtzee
 			scoreView.Location = new System.Drawing.Point(100, 100);
 			flowLayoutPanel1.Controls.Add(scoreView);
 		}
+
+    private void refresh_Click(object sender, EventArgs e)
+    {
+      controller.RefreshGame();
+    }
+
+
 	}
 }

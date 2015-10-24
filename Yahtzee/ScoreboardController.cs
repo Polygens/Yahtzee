@@ -181,5 +181,28 @@
 			}
 		}
 
+    // score reseten
+    public void ResetScore()
+    {
+      model.Score = 0;
+      model.Ace = 0;
+      model.Two = 0;
+      model.Three = 0;
+      model.Four = 0;
+      model.Five = 0;
+      model.Six = 0;
+        model.Bonus = 0;
+			model.SubTotal1 = 0;
+      model.ThreeOK = 0;
+      model.FourOK = 0;
+      model.FullHouse = 0;
+      model.SStraight = 0;
+      model.LStraight = 0;
+			model.YahtzeeSc = 0; 
+      model.Chance = 0;
+      model.SubTotal2= 0;
+      view.ChangeText();
+    }
+
 	}
 }
