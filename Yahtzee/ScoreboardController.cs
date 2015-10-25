@@ -45,7 +45,7 @@ namespace Yahtzee
 
 		public void ClickCategory(string nameLbl)
 		{
-            SetScoreOfCategory(nameLbl, CalculateScoreOfCategory(nameLbl));
+			SetScoreOfCategory(nameLbl, CalculateScoreOfCategory(nameLbl));
 			UpdateTotalScores();
 
 			model.AmntOfRounds++;   //Even vlug erbij gezet.
@@ -92,7 +92,7 @@ namespace Yahtzee
 			{
 				diceString += array[i];
 			}
-            return diceString;
+			return diceString;
 		}
 
 		//Returns the sum of the same dice with a given value
@@ -278,6 +278,27 @@ namespace Yahtzee
 				yahtzeeController.model.Playing = false;
 				yahtzeeController.startController.CheckEndGame();
 			}
+		}
+
+		// score reseten
+		public void ResetScore()
+		{
+			model.Ace = 0;
+			model.Two = 0;
+			model.Three = 0;
+			model.Four = 0;
+			model.Five = 0;
+			model.Six = 0;
+			model.Bonus = 0;
+			model.ThreeOK = 0;
+			model.FourOK = 0;
+			model.FullHouse = 0;
+			model.SStraight = 0;
+			model.LStraight = 0;
+			model.YahtzeeSc = 0;
+			model.Chance = 0;
+
+			view.ChangeText();
 		}
 	}
 }

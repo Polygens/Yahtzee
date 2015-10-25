@@ -57,13 +57,27 @@ namespace Yahtzee
 
 		}
 
-		public void ScoreChangedAll() //Verandert score van alle teerlingen
-		{
+    public void ScoreChangedAll() //Verandert score van alle teerlingen
+    {
+      for (int i = 0; i < aantalTeerlingen; i++)
+      {
+        teerlingen[i].getView().SetText();
+        scoreboard.ChangeScore(i, teerlingen[i].model.AantalOgen);
+      }
+      
+    }
+
+    public void RefreshGame()
+    {
+      scoreboard.ResetScore();
+      //teerlingen
 			for (int i = 0; i < aantalTeerlingen; i++)
 			{
-				teerlingen[i].getView().SetText();
-				scoreboard.ChangeScore(i, teerlingen[i].model.AantalOgen);
+        teerlingen[i].getView().AbleThrow();
+
 			}
-		}
+
+
+    }
 	}
 }

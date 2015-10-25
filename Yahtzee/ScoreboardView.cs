@@ -30,5 +30,25 @@ namespace Yahtzee
 			Control ctn = Scoresheet.Controls[name];
 			ctn.Text = points.ToString();
 		}
+
+		public void ChangeText()
+		{
+			acesPointsLbl.Text = "0";
+			twosPointsLbl.Text = "0";
+			threesPointsLbl.Text = "0";
+			foursPointsLbl.Text = "0";
+			fivesPointsLbl.Text = "0";
+			sixesPointsLbl.Text = "0";
+			fullHousePointsLbl.Text = "0";
+			fourOKPointsLbl.Text = "0";
+			threeOKPointsLbl.Text = "0";
+			lStraightPointsLbl.Text = "0";
+			sStraightPointsLbl.Text = "0";
+			yahtzeePointsLbl.Text = "0";
+			chancePointsLbl.Text = "0";
+			totalPointsLbl_Lower.Text = "0";
+			totalPointsLbl.Text = "0";
+			totalPointsLbl_Upper.Text = "0";
+		}
 	}
 }
