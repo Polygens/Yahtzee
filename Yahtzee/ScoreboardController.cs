@@ -44,7 +44,9 @@ namespace Yahtzee
 
 		public void ClickCategory(string nameLbl)
 		{
-			UpdateTotalScores(nameLbl, CalculateScoreOfCategory(nameLbl));
+			int points = CalculateScoreOfCategory(nameLbl);
+            SetScoreOfCategory(nameLbl, points);
+			UpdateTotalScores(nameLbl, points);
 
 			model.AmntOfRounds++;   //Even vlug erbij gezet.
 			EndingGame();
@@ -71,7 +73,7 @@ namespace Yahtzee
 				model.Bonus = model.PtBonus;
 				view.SetText("bonusPointsLbl", model.Bonus);
 				model.SubTotal1 += model.Bonus;
-            }
+			}
 		}
 
 		//Counts the amount of thrown dice for each possible amount of eyes
@@ -131,41 +133,34 @@ namespace Yahtzee
 			switch (nameLbl)
 			{
 				case "acesPointsLbl":
-					model.Ace = SumOfEye(1);
-					points = model.Ace;
+					points = SumOfEye(1);
 					break;
 
 				case "twosPointsLbl":
-					model.Two = SumOfEye(2);
-					points = model.Two;
+					points = SumOfEye(2);
 					break;
 
 				case "threesPointsLbl":
-					model.Three = SumOfEye(3);
-					points = model.Three;
+					points = SumOfEye(3);
 					break;
 
 				case "foursPointsLbl":
-					model.Four = SumOfEye(4);
-					points = model.Four;
+					points = SumOfEye(4);
 					break;
 
 				case "fivesPointsLbl":
-					model.Five = SumOfEye(5);
-					points = model.Five;
+					points = SumOfEye(5);
 					break;
 
 				case "sixesPointsLbl":
-					model.Six = SumOfEye(6);
-					points = model.Six;
+					points = SumOfEye(6);
 					break;
 
 				case "threeOKPointsLbl":
 					rgx = new Regex(strThreeOK);
 					if (rgx.Matches(ArrayToString(model.DiceNumOfEye)).Count > 0)
 					{
-						model.ThreeOK = SumOfAllEyes();
-						points = model.ThreeOK;
+						points = SumOfAllEyes();
 					}
 					break;
 
@@ -173,8 +168,7 @@ namespace Yahtzee
 					rgx = new Regex(strFourOK);
 					if (rgx.Matches(ArrayToString(model.DiceNumOfEye)).Count > 0)
 					{
-						model.FourOK = SumOfAllEyes();
-						points = model.FourOK;
+						points = SumOfAllEyes();
 					}
 					break;
 
@@ -182,8 +176,7 @@ namespace Yahtzee
 					rgx = new Regex(strFullHouse);
 					if (rgx.Matches(ArrayToString(model.DiceNumOfEye)).Count > 0)
 					{
-						model.FullHouse = model.PtFullHouse;
-						points = model.FullHouse;
+						points = model.PtFullHouse;
 					}
 					break;
 
@@ -191,8 +184,7 @@ namespace Yahtzee
 					rgx = new Regex(strsStraight);
 					if (rgx.Matches(ArrayToString(model.DiceNumOfEye)).Count > 0)
 					{
-						model.SStraight = model.PtLStraight;
-						points = model.SStraight;
+						points = model.PtLStraight;
 					}
 					break;
 
@@ -200,8 +192,7 @@ namespace Yahtzee
 					rgx = new Regex(strlStraight);
 					if (rgx.Matches(ArrayToString(model.DiceNumOfEye)).Count >= 5)
 					{
-						model.LStraight = model.PtLStraight;
-						points = model.LStraight;
+						points = model.PtLStraight;
 					}
 					break;
 
@@ -209,20 +200,79 @@ namespace Yahtzee
 					rgx = new Regex(strYahtzee);
 					if (rgx.Matches(ArrayToString(model.DiceNumOfEye)).Count > 0)
 					{
-						model.YahtzeeSc = SumOfAllEyes();
-						points = model.YahtzeeSc;
+						points = SumOfAllEyes();
 					}
 					break;
 
 				case "chancePointsLbl":
-					model.Chance = SumOfAllEyes();
-					points = model.Chance;
+					points = SumOfAllEyes();
 					break;
 
 				default:
 					break;
 			}
 			return points;
+		}
+
+		private void SetScoreOfCategory(string nameLbl, int points)
+		{
+			switch (nameLbl)
+			{
+				case "acesPointsLbl":
+					model.Ace = points;
+					break;
+
+				case "twosPointsLbl":
+					model.Two = points;
+					break;
+
+				case "threesPointsLbl":
+					model.Three = points;
+					break;
+
+				case "foursPointsLbl":
+					model.Four = points;
+					break;
+
+				case "fivesPointsLbl":
+					model.Five = points;
+					break;
+
+				case "sixesPointsLbl":
+					model.Six = points;
+					break;
+
+				case "threeOKPointsLbl":
+					model.ThreeOK = points;
+					break;
+
+				case "fourOKPointsLbl":
+					model.FourOK = points;
+					break;
+
+				case "fullHousePointsLbl":
+					model.FullHouse = points;
+					break;
+
+				case "sStraightPointsLbl":
+					model.SStraight = points;
+					break;
+
+				case "lStraightPointsLbl":
+					model.LStraight = points;
+					break;
+
+				case "yahtzeePointsLbl":
+					model.YahtzeeSc = points;
+					break;
+
+				case "chancePointsLbl":
+					model.Chance = points;
+					break;
+
+				default:
+					break;
+			}
 		}
 
 		public void EndingGame()  //Checkt of de spel ten einde is. Even vlug erbij gezet...
