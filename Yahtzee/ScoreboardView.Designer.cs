@@ -147,6 +147,7 @@
 			this.sixesPointsLbl.Name = "sixesPointsLbl";
 			this.sixesPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.sixesPointsLbl.TabIndex = 12;
+			this.sixesPointsLbl.Text = "0";
 			this.sixesPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.sixesPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -160,6 +161,7 @@
 			this.fivesPointsLbl.Name = "fivesPointsLbl";
 			this.fivesPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.fivesPointsLbl.TabIndex = 1;
+			this.fivesPointsLbl.Text = "0";
 			this.fivesPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.fivesPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -172,6 +174,7 @@
 			this.totalPointsLbl_Upper.Name = "totalPointsLbl_Upper";
 			this.totalPointsLbl_Upper.Size = new System.Drawing.Size(57, 35);
 			this.totalPointsLbl_Upper.TabIndex = 8;
+			this.totalPointsLbl_Upper.Text = "0";
 			this.totalPointsLbl_Upper.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// bonusPointsLbl
@@ -183,6 +186,7 @@
 			this.bonusPointsLbl.Name = "bonusPointsLbl";
 			this.bonusPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.bonusPointsLbl.TabIndex = 9;
+			this.bonusPointsLbl.Text = "0";
 			this.bonusPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// twosPointsLbl
@@ -195,6 +199,7 @@
 			this.twosPointsLbl.Name = "twosPointsLbl";
 			this.twosPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.twosPointsLbl.TabIndex = 10;
+			this.twosPointsLbl.Text = "0";
 			this.twosPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.twosPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -208,6 +213,7 @@
 			this.acesPointsLbl.Name = "acesPointsLbl";
 			this.acesPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.acesPointsLbl.TabIndex = 11;
+			this.acesPointsLbl.Text = "0";
 			this.acesPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.acesPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -221,6 +227,7 @@
 			this.foursPointsLbl.Name = "foursPointsLbl";
 			this.foursPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.foursPointsLbl.TabIndex = 13;
+			this.foursPointsLbl.Text = "0";
 			this.foursPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.foursPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -234,6 +241,7 @@
 			this.threesPointsLbl.Name = "threesPointsLbl";
 			this.threesPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.threesPointsLbl.TabIndex = 14;
+			this.threesPointsLbl.Text = "0";
 			this.threesPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.threesPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -247,6 +255,7 @@
 			this.threeOKPointsLbl.Name = "threeOKPointsLbl";
 			this.threeOKPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.threeOKPointsLbl.TabIndex = 15;
+			this.threeOKPointsLbl.Text = "0";
 			this.threeOKPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.threeOKPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -260,6 +269,7 @@
 			this.chancePointsLbl.Name = "chancePointsLbl";
 			this.chancePointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.chancePointsLbl.TabIndex = 16;
+			this.chancePointsLbl.Text = "0";
 			this.chancePointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.chancePointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -273,6 +283,7 @@
 			this.yahtzeePointsLbl.Name = "yahtzeePointsLbl";
 			this.yahtzeePointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.yahtzeePointsLbl.TabIndex = 17;
+			this.yahtzeePointsLbl.Text = "0";
 			this.yahtzeePointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.yahtzeePointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -285,6 +296,7 @@
 			this.totalPointsLbl.Name = "totalPointsLbl";
 			this.totalPointsLbl.Size = new System.Drawing.Size(70, 35);
 			this.totalPointsLbl.TabIndex = 2;
+			this.totalPointsLbl.Text = "0";
 			this.totalPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// totalPointsLbl_Lower
@@ -296,6 +308,7 @@
 			this.totalPointsLbl_Lower.Name = "totalPointsLbl_Lower";
 			this.totalPointsLbl_Lower.Size = new System.Drawing.Size(57, 35);
 			this.totalPointsLbl_Lower.TabIndex = 3;
+			this.totalPointsLbl_Lower.Text = "0";
 			this.totalPointsLbl_Lower.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// fullHousePointsLbl
@@ -308,6 +321,7 @@
 			this.fullHousePointsLbl.Name = "fullHousePointsLbl";
 			this.fullHousePointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.fullHousePointsLbl.TabIndex = 4;
+			this.fullHousePointsLbl.Text = "0";
 			this.fullHousePointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.fullHousePointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -321,6 +335,7 @@
 			this.fourOKPointsLbl.Name = "fourOKPointsLbl";
 			this.fourOKPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.fourOKPointsLbl.TabIndex = 5;
+			this.fourOKPointsLbl.Text = "0";
 			this.fourOKPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.fourOKPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -334,6 +349,7 @@
 			this.lStraightPointsLbl.Name = "lStraightPointsLbl";
 			this.lStraightPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.lStraightPointsLbl.TabIndex = 6;
+			this.lStraightPointsLbl.Text = "0";
 			this.lStraightPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.lStraightPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -347,6 +363,7 @@
 			this.sStraightPointsLbl.Name = "sStraightPointsLbl";
 			this.sStraightPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.sStraightPointsLbl.TabIndex = 7;
+			this.sStraightPointsLbl.Text = "0";
 			this.sStraightPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.sStraightPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 

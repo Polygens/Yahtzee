@@ -13,11 +13,11 @@ namespace Yahtzee
 			controller = c;
 		}
 
-
 		private void scoresheetClick(object sender, System.EventArgs e)
 		{
 			System.Windows.Forms.Control tempLbl;
 			tempLbl = (Control)sender;
+
 			//MessageBox.Show(tempLbl.Name);
 			controller.ClickCategory(tempLbl.Name);
 			tempLbl.BackColor = Color.Beige;
@@ -29,7 +29,6 @@ namespace Yahtzee
 		{
 			Control ctn = Scoresheet.Controls[name];
 			ctn.Text = points.ToString();
-			
-        }
+		}
 	}
 }

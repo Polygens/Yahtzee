@@ -8,12 +8,13 @@ namespace Yahtzee
 		public ScoreboardModel model;
 		private YahtzeeController yahtzeeController;
 
-		private string strThreeOK = @"[3]";
-		private string strFourOK = @"[4]";
-		private string strYahtzee = @"[5]";
-		private string strFullHouse = @"[20*3|30*2]";
-		private string strlStraight = @"[1]";
-		private string strsStraight = @"[[12]{4}]";
+		private string strThreeOK = @"3|4|5";
+		private string strFourOK = @"4|5";
+		private string strFullHouse_2 = @"2";
+		private string strFullHouse_3 = @"3";
+		private string strsStraight = @"1111";
+		private string strlStraight = @"11111";
+		private string strYahtzee = @"5";
 
 		public ScoreboardController(YahtzeeController y)
 		{
@@ -53,9 +54,6 @@ namespace Yahtzee
 
 		public void UpdateTotalScores()
 		{
-			model.SubTotal1 = model.Ace + model.Two + model.Three + model.Four + model.Five + model.Six;
-			model.SubTotal2 = model.ThreeOK + model.FourOK + model.FullHouse + model.SStraight + model.LStraight + model.YahtzeeSc + model.Chance;
-			model.Score = model.SubTotal1 + model.SubTotal2;
 			CheckForBonus();
 			view.SetText("totalPointsLbl_Upper", model.SubTotal1);
 			view.SetText("totalPointsLbl_Lower", model.SubTotal2);
@@ -70,7 +68,6 @@ namespace Yahtzee
 			{
 				model.Bonus = model.PtBonus;
 				view.SetText("bonusPointsLbl", model.Bonus);
-				model.SubTotal1 += model.Bonus;
 			}
 		}
 
@@ -95,7 +92,7 @@ namespace Yahtzee
 			{
 				diceString += array[i];
 			}
-			return diceString;
+            return diceString;
 		}
 
 		//Returns the sum of the same dice with a given value
@@ -156,7 +153,7 @@ namespace Yahtzee
 
 				case "threeOKPointsLbl":
 					rgx = new Regex(strThreeOK);
-					if (rgx.Matches(ArrayToString(model.DiceNumOfEye)).Count > 0)
+					if (rgx.Match(ArrayToString(model.DiceNumOfEye)).Success)
 					{
 						points = SumOfAllEyes();
 					}
@@ -164,15 +161,16 @@ namespace Yahtzee
 
 				case "fourOKPointsLbl":
 					rgx = new Regex(strFourOK);
-					if (rgx.Matches(ArrayToString(model.DiceNumOfEye)).Count > 0)
+					if (rgx.Match(ArrayToString(model.DiceNumOfEye)).Success)
 					{
 						points = SumOfAllEyes();
 					}
 					break;
 
 				case "fullHousePointsLbl":
-					rgx = new Regex(strFullHouse);
-					if (rgx.Matches(ArrayToString(model.DiceNumOfEye)).Count > 0)
+					rgx = new Regex(strFullHouse_2);
+					Regex rgx2 = new Regex(strFullHouse_3);
+					if (rgx.Match(ArrayToString(model.DiceNumOfEye)).Success && rgx2.Match(ArrayToString(model.DiceNumOfEye)).Success)
 					{
 						points = model.PtFullHouse;
 					}
@@ -180,15 +178,15 @@ namespace Yahtzee
 
 				case "sStraightPointsLbl":
 					rgx = new Regex(strsStraight);
-					if (rgx.Matches(ArrayToString(model.DiceNumOfEye)).Count > 0)
+					if (rgx.Match(ArrayToString(model.DiceNumOfEye)).Success)
 					{
-						points = model.PtLStraight;
+						points = model.PtSStraight;
 					}
 					break;
 
 				case "lStraightPointsLbl":
 					rgx = new Regex(strlStraight);
-					if (rgx.Matches(ArrayToString(model.DiceNumOfEye)).Count >= 5)
+					if (rgx.Match(ArrayToString(model.DiceNumOfEye)).Success)
 					{
 						points = model.PtLStraight;
 					}
@@ -196,9 +194,9 @@ namespace Yahtzee
 
 				case "yahtzeePointsLbl":
 					rgx = new Regex(strYahtzee);
-					if (rgx.Matches(ArrayToString(model.DiceNumOfEye)).Count > 0)
+					if (rgx.Match(ArrayToString(model.DiceNumOfEye)).Success)
 					{
-						points = SumOfAllEyes();
+						points = model.PtYahtzee;
 					}
 					break;
 
@@ -271,7 +269,6 @@ namespace Yahtzee
 				default:
 					break;
 			}
-			view.SetText(nameLbl, points);
 		}
 
 		public void EndingGame()  //Checkt of de spel ten einde is. Even vlug erbij gezet...

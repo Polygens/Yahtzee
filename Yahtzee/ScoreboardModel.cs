@@ -3,7 +3,7 @@
 	public class ScoreboardModel
 	{
 		private int amntOfRounds;
-		private int[] dice = new int[] { 0, 0, 0, 0, 0 };
+		private int[] dice;
 		private int[] diceNumOfEye = new int[6];
 		private string[] labelNamesArr_UpperSection = new string[] { "acesPointsLbl", "twosPointsLbl", "threesPointsLbl", "foursPointsLbl", "fivesPointsLbl", "sixesPointsLbl" };
 		private string[] labelNamesArr_LowerSection = new string[] { "threeOKPointsLbl", "fourOKPointsLbl", "fullHousePointsLbl", "sStraightPointsLbl", "lStraightPointsLbl", "yahtzeePointsLbl", "chancePointsLbl" };
@@ -12,7 +12,7 @@
 			subTotal1, threeOK, fourOK, fullHouse, sStraight, lStraight,
 			yahtzeeSc, chance, subTotal2;
 
-		private int ptBonus = 35, ptFullHouse = 25, ptSStraight = 30, ptLStraight = 40;
+		private int ptBonus = 35, ptFullHouse = 25, ptSStraight = 30, ptLStraight = 40, ptYahtzee = 50;
 
 		public int PtBonus
 		{
@@ -34,10 +34,9 @@
 			get { return ptLStraight; }
 		}
 
-		public int Score
+		public int PtYahtzee
 		{
-			get { return score; }
-			set { score = value; }
+			get { return ptYahtzee; }
 		}
 
 		public int Ace
@@ -84,8 +83,7 @@
 
 		public int SubTotal1
 		{
-			get { return subTotal1; }
-			set { subTotal1 = value; }
+			get { return subTotal1 = Ace + Two + Three + Four + Five + Six; }
 		}
 
 		public int ThreeOK
@@ -132,8 +130,12 @@
 
 		public int SubTotal2
 		{
-			get { return subTotal2; }
-			set { subTotal2 = value; }
+			get { return subTotal2 = ThreeOK + FourOK + FullHouse + SStraight + LStraight + YahtzeeSc + Chance; }
+		}
+
+		public int Score
+		{
+			get { return score = SubTotal1 + SubTotal2; }
 		}
 
 		public int Highscore
