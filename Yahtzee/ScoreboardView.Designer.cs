@@ -72,7 +72,7 @@
 			// 
 			this.Scoresheet.AutoSize = true;
 			this.Scoresheet.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.Scoresheet.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
+			this.Scoresheet.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
 			this.Scoresheet.ColumnCount = 17;
 			this.Scoresheet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
 			this.Scoresheet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
@@ -134,18 +134,20 @@
 			this.Scoresheet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
 			this.Scoresheet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
 			this.Scoresheet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-			this.Scoresheet.Size = new System.Drawing.Size(1000, 113);
+			this.Scoresheet.Size = new System.Drawing.Size(1000, 109);
 			this.Scoresheet.TabIndex = 2;
 			// 
 			// sixesPointsLbl
 			// 
 			this.sixesPointsLbl.AutoSize = true;
 			this.sixesPointsLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.sixesPointsLbl.Location = new System.Drawing.Point(292, 76);
+			this.sixesPointsLbl.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.sixesPointsLbl.Location = new System.Drawing.Point(291, 73);
 			this.sixesPointsLbl.Margin = new System.Windows.Forms.Padding(0);
 			this.sixesPointsLbl.Name = "sixesPointsLbl";
-			this.sixesPointsLbl.Size = new System.Drawing.Size(56, 35);
+			this.sixesPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.sixesPointsLbl.TabIndex = 12;
+			this.sixesPointsLbl.Text = "0";
 			this.sixesPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.sixesPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -153,11 +155,13 @@
 			// 
 			this.fivesPointsLbl.AutoSize = true;
 			this.fivesPointsLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.fivesPointsLbl.Location = new System.Drawing.Point(234, 76);
+			this.fivesPointsLbl.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.fivesPointsLbl.Location = new System.Drawing.Point(233, 73);
 			this.fivesPointsLbl.Margin = new System.Windows.Forms.Padding(0);
 			this.fivesPointsLbl.Name = "fivesPointsLbl";
-			this.fivesPointsLbl.Size = new System.Drawing.Size(56, 35);
+			this.fivesPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.fivesPointsLbl.TabIndex = 1;
+			this.fivesPointsLbl.Text = "0";
 			this.fivesPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.fivesPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -165,33 +169,37 @@
 			// 
 			this.totalPointsLbl_Upper.AutoSize = true;
 			this.totalPointsLbl_Upper.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.totalPointsLbl_Upper.Location = new System.Drawing.Point(408, 76);
+			this.totalPointsLbl_Upper.Location = new System.Drawing.Point(407, 73);
 			this.totalPointsLbl_Upper.Margin = new System.Windows.Forms.Padding(0);
 			this.totalPointsLbl_Upper.Name = "totalPointsLbl_Upper";
-			this.totalPointsLbl_Upper.Size = new System.Drawing.Size(56, 35);
+			this.totalPointsLbl_Upper.Size = new System.Drawing.Size(57, 35);
 			this.totalPointsLbl_Upper.TabIndex = 8;
+			this.totalPointsLbl_Upper.Text = "0";
 			this.totalPointsLbl_Upper.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// bonusPointsLbl
 			// 
 			this.bonusPointsLbl.AutoSize = true;
 			this.bonusPointsLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.bonusPointsLbl.Location = new System.Drawing.Point(350, 76);
+			this.bonusPointsLbl.Location = new System.Drawing.Point(349, 73);
 			this.bonusPointsLbl.Margin = new System.Windows.Forms.Padding(0);
 			this.bonusPointsLbl.Name = "bonusPointsLbl";
-			this.bonusPointsLbl.Size = new System.Drawing.Size(56, 35);
+			this.bonusPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.bonusPointsLbl.TabIndex = 9;
+			this.bonusPointsLbl.Text = "0";
 			this.bonusPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// twosPointsLbl
 			// 
 			this.twosPointsLbl.AutoSize = true;
 			this.twosPointsLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.twosPointsLbl.Location = new System.Drawing.Point(60, 76);
+			this.twosPointsLbl.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.twosPointsLbl.Location = new System.Drawing.Point(59, 73);
 			this.twosPointsLbl.Margin = new System.Windows.Forms.Padding(0);
 			this.twosPointsLbl.Name = "twosPointsLbl";
-			this.twosPointsLbl.Size = new System.Drawing.Size(56, 35);
+			this.twosPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.twosPointsLbl.TabIndex = 10;
+			this.twosPointsLbl.Text = "0";
 			this.twosPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.twosPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -199,11 +207,13 @@
 			// 
 			this.acesPointsLbl.AutoSize = true;
 			this.acesPointsLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.acesPointsLbl.Location = new System.Drawing.Point(2, 76);
+			this.acesPointsLbl.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.acesPointsLbl.Location = new System.Drawing.Point(1, 73);
 			this.acesPointsLbl.Margin = new System.Windows.Forms.Padding(0);
 			this.acesPointsLbl.Name = "acesPointsLbl";
-			this.acesPointsLbl.Size = new System.Drawing.Size(56, 35);
+			this.acesPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.acesPointsLbl.TabIndex = 11;
+			this.acesPointsLbl.Text = "0";
 			this.acesPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.acesPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -211,11 +221,13 @@
 			// 
 			this.foursPointsLbl.AutoSize = true;
 			this.foursPointsLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.foursPointsLbl.Location = new System.Drawing.Point(176, 76);
+			this.foursPointsLbl.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.foursPointsLbl.Location = new System.Drawing.Point(175, 73);
 			this.foursPointsLbl.Margin = new System.Windows.Forms.Padding(0);
 			this.foursPointsLbl.Name = "foursPointsLbl";
-			this.foursPointsLbl.Size = new System.Drawing.Size(56, 35);
+			this.foursPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.foursPointsLbl.TabIndex = 13;
+			this.foursPointsLbl.Text = "0";
 			this.foursPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.foursPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -223,11 +235,13 @@
 			// 
 			this.threesPointsLbl.AutoSize = true;
 			this.threesPointsLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.threesPointsLbl.Location = new System.Drawing.Point(118, 76);
+			this.threesPointsLbl.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.threesPointsLbl.Location = new System.Drawing.Point(117, 73);
 			this.threesPointsLbl.Margin = new System.Windows.Forms.Padding(0);
 			this.threesPointsLbl.Name = "threesPointsLbl";
-			this.threesPointsLbl.Size = new System.Drawing.Size(56, 35);
+			this.threesPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.threesPointsLbl.TabIndex = 14;
+			this.threesPointsLbl.Text = "0";
 			this.threesPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.threesPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -235,11 +249,13 @@
 			// 
 			this.threeOKPointsLbl.AutoSize = true;
 			this.threeOKPointsLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.threeOKPointsLbl.Location = new System.Drawing.Point(466, 76);
+			this.threeOKPointsLbl.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.threeOKPointsLbl.Location = new System.Drawing.Point(465, 73);
 			this.threeOKPointsLbl.Margin = new System.Windows.Forms.Padding(0);
 			this.threeOKPointsLbl.Name = "threeOKPointsLbl";
-			this.threeOKPointsLbl.Size = new System.Drawing.Size(56, 35);
+			this.threeOKPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.threeOKPointsLbl.TabIndex = 15;
+			this.threeOKPointsLbl.Text = "0";
 			this.threeOKPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.threeOKPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -247,11 +263,13 @@
 			// 
 			this.chancePointsLbl.AutoSize = true;
 			this.chancePointsLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.chancePointsLbl.Location = new System.Drawing.Point(814, 76);
+			this.chancePointsLbl.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.chancePointsLbl.Location = new System.Drawing.Point(813, 73);
 			this.chancePointsLbl.Margin = new System.Windows.Forms.Padding(0);
 			this.chancePointsLbl.Name = "chancePointsLbl";
-			this.chancePointsLbl.Size = new System.Drawing.Size(56, 35);
+			this.chancePointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.chancePointsLbl.TabIndex = 16;
+			this.chancePointsLbl.Text = "0";
 			this.chancePointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.chancePointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -259,11 +277,13 @@
 			// 
 			this.yahtzeePointsLbl.AutoSize = true;
 			this.yahtzeePointsLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.yahtzeePointsLbl.Location = new System.Drawing.Point(756, 76);
+			this.yahtzeePointsLbl.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.yahtzeePointsLbl.Location = new System.Drawing.Point(755, 73);
 			this.yahtzeePointsLbl.Margin = new System.Windows.Forms.Padding(0);
 			this.yahtzeePointsLbl.Name = "yahtzeePointsLbl";
-			this.yahtzeePointsLbl.Size = new System.Drawing.Size(56, 35);
+			this.yahtzeePointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.yahtzeePointsLbl.TabIndex = 17;
+			this.yahtzeePointsLbl.Text = "0";
 			this.yahtzeePointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.yahtzeePointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -271,33 +291,37 @@
 			// 
 			this.totalPointsLbl.AutoSize = true;
 			this.totalPointsLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.totalPointsLbl.Location = new System.Drawing.Point(930, 76);
+			this.totalPointsLbl.Location = new System.Drawing.Point(929, 73);
 			this.totalPointsLbl.Margin = new System.Windows.Forms.Padding(0);
 			this.totalPointsLbl.Name = "totalPointsLbl";
-			this.totalPointsLbl.Size = new System.Drawing.Size(68, 35);
+			this.totalPointsLbl.Size = new System.Drawing.Size(70, 35);
 			this.totalPointsLbl.TabIndex = 2;
+			this.totalPointsLbl.Text = "0";
 			this.totalPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// totalPointsLbl_Lower
 			// 
 			this.totalPointsLbl_Lower.AutoSize = true;
 			this.totalPointsLbl_Lower.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.totalPointsLbl_Lower.Location = new System.Drawing.Point(872, 76);
+			this.totalPointsLbl_Lower.Location = new System.Drawing.Point(871, 73);
 			this.totalPointsLbl_Lower.Margin = new System.Windows.Forms.Padding(0);
 			this.totalPointsLbl_Lower.Name = "totalPointsLbl_Lower";
-			this.totalPointsLbl_Lower.Size = new System.Drawing.Size(56, 35);
+			this.totalPointsLbl_Lower.Size = new System.Drawing.Size(57, 35);
 			this.totalPointsLbl_Lower.TabIndex = 3;
+			this.totalPointsLbl_Lower.Text = "0";
 			this.totalPointsLbl_Lower.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// fullHousePointsLbl
 			// 
 			this.fullHousePointsLbl.AutoSize = true;
 			this.fullHousePointsLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.fullHousePointsLbl.Location = new System.Drawing.Point(582, 76);
+			this.fullHousePointsLbl.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.fullHousePointsLbl.Location = new System.Drawing.Point(581, 73);
 			this.fullHousePointsLbl.Margin = new System.Windows.Forms.Padding(0);
 			this.fullHousePointsLbl.Name = "fullHousePointsLbl";
-			this.fullHousePointsLbl.Size = new System.Drawing.Size(56, 35);
+			this.fullHousePointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.fullHousePointsLbl.TabIndex = 4;
+			this.fullHousePointsLbl.Text = "0";
 			this.fullHousePointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.fullHousePointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -305,11 +329,13 @@
 			// 
 			this.fourOKPointsLbl.AutoSize = true;
 			this.fourOKPointsLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.fourOKPointsLbl.Location = new System.Drawing.Point(524, 76);
+			this.fourOKPointsLbl.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.fourOKPointsLbl.Location = new System.Drawing.Point(523, 73);
 			this.fourOKPointsLbl.Margin = new System.Windows.Forms.Padding(0);
 			this.fourOKPointsLbl.Name = "fourOKPointsLbl";
-			this.fourOKPointsLbl.Size = new System.Drawing.Size(56, 35);
+			this.fourOKPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.fourOKPointsLbl.TabIndex = 5;
+			this.fourOKPointsLbl.Text = "0";
 			this.fourOKPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.fourOKPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -317,11 +343,13 @@
 			// 
 			this.lStraightPointsLbl.AutoSize = true;
 			this.lStraightPointsLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.lStraightPointsLbl.Location = new System.Drawing.Point(698, 76);
+			this.lStraightPointsLbl.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.lStraightPointsLbl.Location = new System.Drawing.Point(697, 73);
 			this.lStraightPointsLbl.Margin = new System.Windows.Forms.Padding(0);
 			this.lStraightPointsLbl.Name = "lStraightPointsLbl";
-			this.lStraightPointsLbl.Size = new System.Drawing.Size(56, 35);
+			this.lStraightPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.lStraightPointsLbl.TabIndex = 6;
+			this.lStraightPointsLbl.Text = "0";
 			this.lStraightPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.lStraightPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
@@ -329,18 +357,20 @@
 			// 
 			this.sStraightPointsLbl.AutoSize = true;
 			this.sStraightPointsLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.sStraightPointsLbl.Location = new System.Drawing.Point(640, 76);
+			this.sStraightPointsLbl.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.sStraightPointsLbl.Location = new System.Drawing.Point(639, 73);
 			this.sStraightPointsLbl.Margin = new System.Windows.Forms.Padding(0);
 			this.sStraightPointsLbl.Name = "sStraightPointsLbl";
-			this.sStraightPointsLbl.Size = new System.Drawing.Size(56, 35);
+			this.sStraightPointsLbl.Size = new System.Drawing.Size(57, 35);
 			this.sStraightPointsLbl.TabIndex = 7;
+			this.sStraightPointsLbl.Text = "0";
 			this.sStraightPointsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.sStraightPointsLbl.Click += new System.EventHandler(this.scoresheetClick);
 			// 
 			// uppersLbl
 			// 
 			this.uppersLbl.AutoSize = true;
-			this.uppersLbl.Location = new System.Drawing.Point(5, 2);
+			this.uppersLbl.Location = new System.Drawing.Point(4, 1);
 			this.uppersLbl.Name = "uppersLbl";
 			this.uppersLbl.Size = new System.Drawing.Size(41, 26);
 			this.uppersLbl.TabIndex = 0;
@@ -349,7 +379,7 @@
 			// lowersLbl
 			// 
 			this.lowersLbl.AutoSize = true;
-			this.lowersLbl.Location = new System.Drawing.Point(469, 2);
+			this.lowersLbl.Location = new System.Drawing.Point(468, 1);
 			this.lowersLbl.Name = "lowersLbl";
 			this.lowersLbl.Size = new System.Drawing.Size(41, 26);
 			this.lowersLbl.TabIndex = 0;
@@ -358,7 +388,7 @@
 			// acesLbl
 			// 
 			this.acesLbl.AutoSize = true;
-			this.acesLbl.Location = new System.Drawing.Point(5, 39);
+			this.acesLbl.Location = new System.Drawing.Point(4, 37);
 			this.acesLbl.Name = "acesLbl";
 			this.acesLbl.Size = new System.Drawing.Size(31, 13);
 			this.acesLbl.TabIndex = 1;
@@ -367,7 +397,7 @@
 			// twoLbl
 			// 
 			this.twoLbl.AutoSize = true;
-			this.twoLbl.Location = new System.Drawing.Point(63, 39);
+			this.twoLbl.Location = new System.Drawing.Point(62, 37);
 			this.twoLbl.Name = "twoLbl";
 			this.twoLbl.Size = new System.Drawing.Size(33, 13);
 			this.twoLbl.TabIndex = 1;
@@ -376,7 +406,7 @@
 			// threeLbl
 			// 
 			this.threeLbl.AutoSize = true;
-			this.threeLbl.Location = new System.Drawing.Point(121, 39);
+			this.threeLbl.Location = new System.Drawing.Point(120, 37);
 			this.threeLbl.Name = "threeLbl";
 			this.threeLbl.Size = new System.Drawing.Size(35, 13);
 			this.threeLbl.TabIndex = 1;
@@ -385,7 +415,7 @@
 			// fourLbl
 			// 
 			this.fourLbl.AutoSize = true;
-			this.fourLbl.Location = new System.Drawing.Point(179, 39);
+			this.fourLbl.Location = new System.Drawing.Point(178, 37);
 			this.fourLbl.Name = "fourLbl";
 			this.fourLbl.Size = new System.Drawing.Size(33, 13);
 			this.fourLbl.TabIndex = 1;
@@ -394,7 +424,7 @@
 			// fiveLbl
 			// 
 			this.fiveLbl.AutoSize = true;
-			this.fiveLbl.Location = new System.Drawing.Point(237, 39);
+			this.fiveLbl.Location = new System.Drawing.Point(236, 37);
 			this.fiveLbl.Name = "fiveLbl";
 			this.fiveLbl.Size = new System.Drawing.Size(32, 13);
 			this.fiveLbl.TabIndex = 1;
@@ -403,7 +433,7 @@
 			// sixLbl
 			// 
 			this.sixLbl.AutoSize = true;
-			this.sixLbl.Location = new System.Drawing.Point(295, 39);
+			this.sixLbl.Location = new System.Drawing.Point(294, 37);
 			this.sixLbl.Name = "sixLbl";
 			this.sixLbl.Size = new System.Drawing.Size(32, 13);
 			this.sixLbl.TabIndex = 1;
@@ -412,7 +442,7 @@
 			// bonusLbl
 			// 
 			this.bonusLbl.AutoSize = true;
-			this.bonusLbl.Location = new System.Drawing.Point(353, 39);
+			this.bonusLbl.Location = new System.Drawing.Point(352, 37);
 			this.bonusLbl.Name = "bonusLbl";
 			this.bonusLbl.Size = new System.Drawing.Size(37, 13);
 			this.bonusLbl.TabIndex = 1;
@@ -421,7 +451,7 @@
 			// totalLbl_Upper
 			// 
 			this.totalLbl_Upper.AutoSize = true;
-			this.totalLbl_Upper.Location = new System.Drawing.Point(411, 39);
+			this.totalLbl_Upper.Location = new System.Drawing.Point(410, 37);
 			this.totalLbl_Upper.Name = "totalLbl_Upper";
 			this.totalLbl_Upper.Size = new System.Drawing.Size(31, 26);
 			this.totalLbl_Upper.TabIndex = 1;
@@ -430,7 +460,7 @@
 			// threeOKLbl
 			// 
 			this.threeOKLbl.AutoSize = true;
-			this.threeOKLbl.Location = new System.Drawing.Point(469, 39);
+			this.threeOKLbl.Location = new System.Drawing.Point(468, 37);
 			this.threeOKLbl.Name = "threeOKLbl";
 			this.threeOKLbl.Size = new System.Drawing.Size(50, 26);
 			this.threeOKLbl.TabIndex = 1;
@@ -439,7 +469,7 @@
 			// fourOKLbl
 			// 
 			this.fourOKLbl.AutoSize = true;
-			this.fourOKLbl.Location = new System.Drawing.Point(527, 39);
+			this.fourOKLbl.Location = new System.Drawing.Point(526, 37);
 			this.fourOKLbl.Name = "fourOKLbl";
 			this.fourOKLbl.Size = new System.Drawing.Size(49, 26);
 			this.fourOKLbl.TabIndex = 1;
@@ -448,7 +478,7 @@
 			// fullHouseLbl
 			// 
 			this.fullHouseLbl.AutoSize = true;
-			this.fullHouseLbl.Location = new System.Drawing.Point(585, 39);
+			this.fullHouseLbl.Location = new System.Drawing.Point(584, 37);
 			this.fullHouseLbl.Name = "fullHouseLbl";
 			this.fullHouseLbl.Size = new System.Drawing.Size(36, 26);
 			this.fullHouseLbl.TabIndex = 1;
@@ -457,7 +487,7 @@
 			// sStraightLbl
 			// 
 			this.sStraightLbl.AutoSize = true;
-			this.sStraightLbl.Location = new System.Drawing.Point(643, 39);
+			this.sStraightLbl.Location = new System.Drawing.Point(642, 37);
 			this.sStraightLbl.Name = "sStraightLbl";
 			this.sStraightLbl.Size = new System.Drawing.Size(41, 26);
 			this.sStraightLbl.TabIndex = 1;
@@ -466,7 +496,7 @@
 			// lStraightLbl
 			// 
 			this.lStraightLbl.AutoSize = true;
-			this.lStraightLbl.Location = new System.Drawing.Point(701, 39);
+			this.lStraightLbl.Location = new System.Drawing.Point(700, 37);
 			this.lStraightLbl.Name = "lStraightLbl";
 			this.lStraightLbl.Size = new System.Drawing.Size(41, 26);
 			this.lStraightLbl.TabIndex = 1;
@@ -475,7 +505,7 @@
 			// yahtzeeLbl
 			// 
 			this.yahtzeeLbl.AutoSize = true;
-			this.yahtzeeLbl.Location = new System.Drawing.Point(759, 39);
+			this.yahtzeeLbl.Location = new System.Drawing.Point(758, 37);
 			this.yahtzeeLbl.Name = "yahtzeeLbl";
 			this.yahtzeeLbl.Size = new System.Drawing.Size(46, 13);
 			this.yahtzeeLbl.TabIndex = 1;
@@ -484,7 +514,7 @@
 			// chanceLbl
 			// 
 			this.chanceLbl.AutoSize = true;
-			this.chanceLbl.Location = new System.Drawing.Point(817, 39);
+			this.chanceLbl.Location = new System.Drawing.Point(816, 37);
 			this.chanceLbl.Name = "chanceLbl";
 			this.chanceLbl.Size = new System.Drawing.Size(44, 13);
 			this.chanceLbl.TabIndex = 1;
@@ -493,7 +523,7 @@
 			// totalLbl_Lower
 			// 
 			this.totalLbl_Lower.AutoSize = true;
-			this.totalLbl_Lower.Location = new System.Drawing.Point(875, 39);
+			this.totalLbl_Lower.Location = new System.Drawing.Point(874, 37);
 			this.totalLbl_Lower.Name = "totalLbl_Lower";
 			this.totalLbl_Lower.Size = new System.Drawing.Size(40, 26);
 			this.totalLbl_Lower.TabIndex = 1;
@@ -502,7 +532,7 @@
 			// totalLbl
 			// 
 			this.totalLbl.AutoSize = true;
-			this.totalLbl.Location = new System.Drawing.Point(933, 39);
+			this.totalLbl.Location = new System.Drawing.Point(932, 37);
 			this.totalLbl.Name = "totalLbl";
 			this.totalLbl.Size = new System.Drawing.Size(31, 13);
 			this.totalLbl.TabIndex = 1;
@@ -517,7 +547,7 @@
 			this.Controls.Add(this.Scoresheet);
 			this.MinimumSize = new System.Drawing.Size(750, 90);
 			this.Name = "ScoreboardView";
-			this.Size = new System.Drawing.Size(1003, 116);
+			this.Size = new System.Drawing.Size(1003, 112);
 			this.Scoresheet.ResumeLayout(false);
 			this.Scoresheet.PerformLayout();
 			this.ResumeLayout(false);

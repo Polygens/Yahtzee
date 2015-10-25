@@ -3,37 +3,40 @@
 	public class ScoreboardModel
 	{
 		private int amntOfRounds;
-		private int[] numbers;
-		private int[] diceCount = new int[6];
+		private int[] dice;
+		private int[] diceNumOfEye = new int[6];
+		private string[] labelNamesArr_UpperSection = new string[] { "acesPointsLbl", "twosPointsLbl", "threesPointsLbl", "foursPointsLbl", "fivesPointsLbl", "sixesPointsLbl" };
+		private string[] labelNamesArr_LowerSection = new string[] { "threeOKPointsLbl", "fourOKPointsLbl", "fullHousePointsLbl", "sStraightPointsLbl", "lStraightPointsLbl", "yahtzeePointsLbl", "chancePointsLbl" };
 
 		private int score, highscore, ace, two, three, four, five, six, bonus,
 			subTotal1, threeOK, fourOK, fullHouse, sStraight, lStraight,
 			yahtzeeSc, chance, subTotal2;
 
-		private int ptBonus = 35, ptFullHouse = 25, ptSStraight = 30, ptLStraight = 40;
+		private int ptBonus = 35, ptFullHouse = 25, ptSStraight = 30, ptLStraight = 40, ptYahtzee = 50;
 
 		public int PtBonus
 		{
 			get { return ptBonus; }
 		}
+
 		public int PtFullHouse
 		{
 			get { return ptFullHouse; }
 		}
+
 		public int PtSStraight
 		{
 			get { return ptSStraight; }
 		}
+
 		public int PtLStraight
 		{
 			get { return ptLStraight; }
 		}
 
-
-		public int Score
+		public int PtYahtzee
 		{
-			get { return score; }
-			set { score = value; }
+			get { return ptYahtzee; }
 		}
 
 		public int Ace
@@ -80,8 +83,7 @@
 
 		public int SubTotal1
 		{
-			get { return subTotal1; }
-			set { subTotal1 = value; }
+			get { return subTotal1 = Ace + Two + Three + Four + Five + Six; }
 		}
 
 		public int ThreeOK
@@ -128,8 +130,12 @@
 
 		public int SubTotal2
 		{
-			get { return subTotal2; }
-			set { subTotal2 = value; }
+			get { return subTotal2 = ThreeOK + FourOK + FullHouse + SStraight + LStraight + YahtzeeSc + Chance; }
+		}
+
+		public int Score
+		{
+			get { return score = SubTotal1 + SubTotal2; }
 		}
 
 		public int Highscore
@@ -138,16 +144,16 @@
 			set { highscore = value; }
 		}
 
-		public int[] Numbers
+		public int[] Dice
 		{
-			get { return numbers; }
-			set { numbers = value; }
+			get { return dice; }
+			set { dice = value; }
 		}
 
-		public int[] DiceCount
+		public int[] DiceNumOfEye
 		{
-			get { return diceCount; }
-			set { diceCount = value; }
+			get { return diceNumOfEye; }
+			set { diceNumOfEye = value; }
 		}
 
 		public int AmntOfRounds
@@ -156,5 +162,16 @@
 			set { amntOfRounds = value; }
 		}
 
+		public string[] LabelNamesArr_LowerSection
+		{
+			get { return labelNamesArr_LowerSection; }
+			set { labelNamesArr_LowerSection = value; }
+		}
+
+		public string[] LabelNamesArr_UpperSection
+		{
+			get { return labelNamesArr_UpperSection; }
+			set { labelNamesArr_UpperSection = value; }
+		}
 	}
 }

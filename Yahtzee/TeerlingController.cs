@@ -4,14 +4,13 @@ namespace Yahtzee
 {
 	public class TeerlingController
 	{
-		private static int seed = 0;
-
 		//member die de view opvangt
 		private TeerlingView view;
 
 		public TeerlingModel model;
 		private YahtzeeController yahtzeeController;
 		private int throwns;
+		//Nieuwe instantie van Random object genereren
 
 		public TeerlingController(int i, YahtzeeController y)
 		{
@@ -35,8 +34,8 @@ namespace Yahtzee
 
 			if (!model.Vastgezet)
 			{
-				//Nieuwe instantie van Random object genereren
-				Random random = new Random(seed++);
+				
+				Random random = new Random(DateTime.Now.Millisecond + model.IndexOfTeerling);
 
 				//Random getal genereren tussen 1 & 6
 				int aantalOgen = random.Next(1, 7);

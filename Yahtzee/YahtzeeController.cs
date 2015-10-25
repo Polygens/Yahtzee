@@ -23,7 +23,7 @@ namespace Yahtzee
 			view.Show();  //Laat form verschijnen
 			
 			aantalTeerlingen = model.AantalTeerlingen;
-			scoreboard.model.Numbers = new int[aantalTeerlingen];
+			scoreboard.model.Dice = new int[aantalTeerlingen];
 			
 
 			for (int i = 0; i < aantalTeerlingen; i++)
