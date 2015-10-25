@@ -44,21 +44,19 @@ namespace Yahtzee
 
 		public void ClickCategory(string nameLbl)
 		{
-			int points = CalculateScoreOfCategory(nameLbl);
-            SetScoreOfCategory(nameLbl, points);
-			UpdateTotalScores(nameLbl, points);
+            SetScoreOfCategory(nameLbl, CalculateScoreOfCategory(nameLbl));
+			UpdateTotalScores();
 
 			model.AmntOfRounds++;   //Even vlug erbij gezet.
 			EndingGame();
 		}
 
-		public void UpdateTotalScores(string nameLbl, int points)
+		public void UpdateTotalScores()
 		{
 			model.SubTotal1 = model.Ace + model.Two + model.Three + model.Four + model.Five + model.Six;
 			model.SubTotal2 = model.ThreeOK + model.FourOK + model.FullHouse + model.SStraight + model.LStraight + model.YahtzeeSc + model.Chance;
 			model.Score = model.SubTotal1 + model.SubTotal2;
 			CheckForBonus();
-			view.SetText(nameLbl, points);
 			view.SetText("totalPointsLbl_Upper", model.SubTotal1);
 			view.SetText("totalPointsLbl_Lower", model.SubTotal2);
 			view.SetText("totalPointsLbl", model.Score);
@@ -273,6 +271,7 @@ namespace Yahtzee
 				default:
 					break;
 			}
+			view.SetText(nameLbl, points);
 		}
 
 		public void EndingGame()  //Checkt of de spel ten einde is. Even vlug erbij gezet...
