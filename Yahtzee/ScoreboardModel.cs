@@ -3,8 +3,10 @@
 	public class ScoreboardModel
 	{
 		private int amntOfRounds;
-		private int[] numbers;
-		private int[] diceCount = new int[6];
+		private int[] dice = new int[] { 0, 0, 0, 0, 0 };
+		private int[] diceNumOfEye = new int[6];
+		private string[] labelNamesArr_UpperSection = new string[] { "acesPointsLbl", "twosPointsLbl", "threesPointsLbl", "foursPointsLbl", "fivesPointsLbl", "sixesPointsLbl" };
+		private string[] labelNamesArr_LowerSection = new string[] { "threeOKPointsLbl", "fourOKPointsLbl", "fullHousePointsLbl", "sStraightPointsLbl", "lStraightPointsLbl", "yahtzeePointsLbl", "chancePointsLbl" };
 
 		private int score, highscore, ace, two, three, four, five, six, bonus,
 			subTotal1, threeOK, fourOK, fullHouse, sStraight, lStraight,
@@ -16,19 +18,21 @@
 		{
 			get { return ptBonus; }
 		}
+
 		public int PtFullHouse
 		{
 			get { return ptFullHouse; }
 		}
+
 		public int PtSStraight
 		{
 			get { return ptSStraight; }
 		}
+
 		public int PtLStraight
 		{
 			get { return ptLStraight; }
 		}
-
 
 		public int Score
 		{
@@ -138,16 +142,16 @@
 			set { highscore = value; }
 		}
 
-		public int[] Numbers
+		public int[] Dice
 		{
-			get { return numbers; }
-			set { numbers = value; }
+			get { return dice; }
+			set { dice = value; }
 		}
 
-		public int[] DiceCount
+		public int[] DiceNumOfEye
 		{
-			get { return diceCount; }
-			set { diceCount = value; }
+			get { return diceNumOfEye; }
+			set { diceNumOfEye = value; }
 		}
 
 		public int AmntOfRounds
@@ -156,5 +160,16 @@
 			set { amntOfRounds = value; }
 		}
 
+		public string[] LabelNamesArr_LowerSection
+		{
+			get { return labelNamesArr_LowerSection; }
+			set { labelNamesArr_LowerSection = value; }
+		}
+
+		public string[] LabelNamesArr_UpperSection
+		{
+			get { return labelNamesArr_UpperSection; }
+			set { labelNamesArr_UpperSection = value; }
+		}
 	}
 }

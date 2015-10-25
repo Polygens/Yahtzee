@@ -21,6 +21,7 @@ namespace Yahtzee
 			//MessageBox.Show(tempLbl.Name);
 			controller.ClickCategory(tempLbl.Name);
 			tempLbl.BackColor = Color.Beige;
+			tempLbl.ForeColor = Color.Black;
 			tempLbl.Click -= scoresheetClick;
 		}
 
