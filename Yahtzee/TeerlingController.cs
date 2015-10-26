@@ -9,7 +9,7 @@ namespace Yahtzee
 
 		public TeerlingModel model;
 		private YahtzeeController yahtzeeController;
-		private int throwns;
+
 		//Nieuwe instantie van Random object genereren
 
 		public TeerlingController(int i, YahtzeeController y)
@@ -19,7 +19,6 @@ namespace Yahtzee
 			model.IndexOfTeerling = i;
 			view.SetIndexOfTeerling();
 			yahtzeeController = y;
-			throwns = model.AantalWorpen;
 		}
 
 		public TeerlingView getView()
@@ -29,12 +28,10 @@ namespace Yahtzee
 
 		public void Werp()
 		{
-			throwns++;
-			model.AantalWorpen = throwns;
+			model.AantalWorpen++;
 
 			if (!model.Vastgezet)
 			{
-				
 				Random random = new Random(DateTime.Now.Millisecond + model.IndexOfTeerling);
 
 				//Random getal genereren tussen 1 & 6
@@ -44,7 +41,7 @@ namespace Yahtzee
 				model.AantalOgen = aantalOgen;
 			}
 
-			if (throwns == 3)
+			if (model.AantalWorpen == 3)
 			{
 				view.DisableThrow();
 			}
@@ -57,17 +54,18 @@ namespace Yahtzee
 			model.isBtnVisible = false;
 		}
 
-    public void Losmaken()
-    {
-      model.KleurTeerling = System.Drawing.Color.Black;
-      model.Vastgezet = false;
-      model.isBtnVisible = true;
-      ThrowsToZero();
-    }
+		public void Losmaken()
+		{
+			model.KleurTeerling = System.Drawing.Color.Black;
+			model.Vastgezet = false;
+			model.isBtnVisible = true;
+			ThrowsToZero();
+		}
 
-    public void ThrowsToZero(){
-      throwns = 0;
-    }
+		public void ThrowsToZero()
+		{
+			model.AantalWorpen = 0;
+		}
 
 		public void ScoreChanged()
 		{

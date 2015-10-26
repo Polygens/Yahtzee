@@ -1,4 +1,6 @@
-﻿namespace Yahtzee
+﻿using System.Collections.Generic;
+
+namespace Yahtzee
 {
 	public class YahtzeeModel
 	{
@@ -6,10 +8,11 @@
 		private int playerNumber = 0;
 		private bool playing = true;
 
+		private List<TeerlingController> teerlingen = new List<TeerlingController>();
+
 		public int AantalTeerlingen
 		{
 			get { return aantalTeerlingen; }
-			set { aantalTeerlingen = value; }
 		}
 
 		public int PlayerNumber
@@ -24,5 +27,10 @@
 			set { playing = value; }
 		}
 
+		public List<TeerlingController> Teerlingen
+		{
+			get { return teerlingen; }
+			set { teerlingen = value; }
+		}
 	}
 }
