@@ -36,15 +36,14 @@ namespace Yahtzee
 			}
 		}
 
-    public void AbleThrow()
-    {
-      controller.Losmaken();
-      TeerlingLabel.ForeColor = controller.model.KleurTeerling;
-      if (controller.model.isBtnVisible)
-      {
-        TeerlingWerpen.Show();
-      }
-    }
+		public void AbleThrow()
+		{
+			TeerlingLabel.ForeColor = controller.model.KleurTeerling;
+			if (controller.model.isBtnVisible)
+			{
+				TeerlingWerpen.Show();
+			}
+		}
 
 		private void TeerlingLabel_Click(object sender, EventArgs e)
 		{

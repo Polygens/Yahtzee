@@ -47,7 +47,11 @@ namespace Yahtzee
 		{
 			SetScoreOfCategory(nameLbl, CalculateScoreOfCategory(nameLbl));
 			UpdateTotalScores();
-
+			for (int i = 0; i < yahtzeeController.model.AantalTeerlingen; i++)
+			{
+				yahtzeeController.model.Teerlingen[i].Losmaken();
+            }
+			yahtzeeController.ScoreChangedAll();
 			model.AmntOfRounds++;   //Even vlug erbij gezet.
 			EndingGame();
 		}
@@ -297,8 +301,8 @@ namespace Yahtzee
 			model.LStraight = 0;
 			model.YahtzeeSc = 0;
 			model.Chance = 0;
-
-			view.ChangeText();
+			UpdateTotalScores();
+            view.ChangeText();
 		}
 	}
 }
