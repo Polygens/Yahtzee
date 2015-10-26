@@ -59,7 +59,8 @@ namespace Yahtzee
 			model.KleurTeerling = System.Drawing.Color.Black;
 			model.Vastgezet = false;
 			model.isBtnVisible = true;
-			ThrowsToZero();
+			view.AbleThrow();
+            ThrowsToZero();
 		}
 
 		public void ThrowsToZero()

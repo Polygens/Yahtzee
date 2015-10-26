@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Yahtzee
+﻿namespace Yahtzee
 {
 	public class ScoreboardGlobalPlayerController
 	{
@@ -16,7 +10,7 @@ namespace Yahtzee
 		{
 			model = new ScoreboardGlobalPlayerModel(); //Moet voor de view worden aangemaakt in dit geval.
 			model.PlayerNumber = i;
-			view = new ScoreboardGlobalPlayerView(this);		
+			view = new ScoreboardGlobalPlayerView(this);
 			yahtzeeStart = ys;
 		}
 
@@ -31,9 +25,5 @@ namespace Yahtzee
 			model.Score = yahtzeeStart.yahtzeeControl[Plnumber].GetScoreContr().model.Score;
 			view.UpdateScore();
 		}
-
-	
-
-
 	}
 }
