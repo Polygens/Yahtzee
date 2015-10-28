@@ -29,71 +29,85 @@ namespace Yahtzee
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-			this.button1 = new System.Windows.Forms.Button();
-			this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-			this.refresh = new System.Windows.Forms.Button();
-			this.flowLayoutPanel1.SuspendLayout();
-			this.SuspendLayout();
-			// 
-			// flowLayoutPanel1
-			// 
-			this.flowLayoutPanel1.AutoSize = true;
-			this.flowLayoutPanel1.Controls.Add(this.button1);
-			this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
-			this.flowLayoutPanel1.Controls.Add(this.refresh);
-			this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-			this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-			this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(20);
-			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-			this.flowLayoutPanel1.Size = new System.Drawing.Size(300, 261);
-			this.flowLayoutPanel1.TabIndex = 0;
-			// 
-			// button1
-			// 
-			this.button1.AutoSize = true;
-			this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-			this.button1.Location = new System.Drawing.Point(3, 3);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(67, 23);
-			this.button1.TabIndex = 0;
-			this.button1.Text = "Werp alles";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
-			// 
-			// flowLayoutPanel2
-			// 
-			this.flowLayoutPanel2.AutoSize = true;
-			this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 32);
-			this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-			this.flowLayoutPanel2.Size = new System.Drawing.Size(75, 0);
-			this.flowLayoutPanel2.TabIndex = 0;
-			// 
-			// refresh
-			// 
-			this.refresh.Location = new System.Drawing.Point(3, 38);
-			this.refresh.Name = "refresh";
-			this.refresh.Size = new System.Drawing.Size(75, 23);
-			this.refresh.TabIndex = 1;
-			this.refresh.Text = "Restart";
-			this.refresh.Click += new System.EventHandler(this.refresh_Click);
-			// 
-			// YahtzeeView
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.AutoSize = true;
-			this.ClientSize = new System.Drawing.Size(300, 261);
-			this.Controls.Add(this.flowLayoutPanel1);
-			this.Name = "YahtzeeView";
-			this.Text = "Player";
+
+      this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+      this.button1 = new System.Windows.Forms.Button();
+      this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+      this.refresh = new System.Windows.Forms.Button();
+      this.cheat = new System.Windows.Forms.Button();
+      this.flowLayoutPanel1.SuspendLayout();
+      this.SuspendLayout();
+      // 
+      // flowLayoutPanel1
+      // 
+      this.flowLayoutPanel1.AutoSize = true;
+      this.flowLayoutPanel1.Controls.Add(this.button1);
+      this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
+      this.flowLayoutPanel1.Controls.Add(this.refresh);
+      this.flowLayoutPanel1.Controls.Add(this.cheat);
+      this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+      this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+      this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(20);
+      this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+      this.flowLayoutPanel1.Size = new System.Drawing.Size(300, 261);
+      this.flowLayoutPanel1.TabIndex = 0;
+      // 
+      // button1
+      // 
+      this.button1.AutoSize = true;
+      this.button1.Dock = System.Windows.Forms.DockStyle.Left;
+      this.button1.Location = new System.Drawing.Point(3, 3);
+      this.button1.Name = "button1";
+      this.button1.Size = new System.Drawing.Size(67, 23);
+      this.button1.TabIndex = 0;
+      this.button1.Text = "Werp alles";
+      this.button1.UseVisualStyleBackColor = true;
+      this.button1.Click += new System.EventHandler(this.button1_Click);
+      // 
+      // flowLayoutPanel2
+      // 
+      this.flowLayoutPanel2.AutoSize = true;
+      this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 32);
+      this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+      this.flowLayoutPanel2.Size = new System.Drawing.Size(75, 0);
+      this.flowLayoutPanel2.TabIndex = 0;
+      // 
+      // refresh
+      // 
+      this.refresh.Location = new System.Drawing.Point(3, 38);
+      this.refresh.Name = "refresh";
+      this.refresh.Size = new System.Drawing.Size(75, 23);
+      this.refresh.TabIndex = 1;
+      this.refresh.Text = "Restart";
+      this.refresh.Click += new System.EventHandler(this.refresh_Click);
+      // 
+      // cheat
+      // 
+      this.cheat.FlatAppearance.BorderSize = 0;
+      this.cheat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.cheat.Location = new System.Drawing.Point(3, 67);
+      this.cheat.Name = "cheat";
+      this.cheat.Size = new System.Drawing.Size(75, 21);
+      this.cheat.TabIndex = 2;
+      this.cheat.UseVisualStyleBackColor = true;
+      this.cheat.Click += new System.EventHandler(this.cheat_Click);
+      // 
+      // YahtzeeView
+      // 
+      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+      this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.AutoSize = true;
+      this.ClientSize = new System.Drawing.Size(300, 261);
+      this.Controls.Add(this.flowLayoutPanel1);
+      this.Name = "YahtzeeView";
+      this.Text = "Player";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CloseForm);
-			this.flowLayoutPanel1.ResumeLayout(false);
-			this.flowLayoutPanel1.PerformLayout();
-			this.ResumeLayout(false);
-			this.PerformLayout();
+      this.flowLayoutPanel1.ResumeLayout(false);
+      this.flowLayoutPanel1.PerformLayout();
+      this.ResumeLayout(false);
+      this.PerformLayout();
 
 		}
 
@@ -103,6 +117,7 @@ namespace Yahtzee
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     private System.Windows.Forms.Button refresh;
+    private System.Windows.Forms.Button cheat;
 	}
 }
 

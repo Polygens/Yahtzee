@@ -45,10 +45,15 @@ namespace Yahtzee
 			DialogResult forfeit = MessageBox.Show("Do you want to stop?", "Warning: Forfeit", MessageBoxButtons.YesNo);
 			if (forfeit == DialogResult.No) {
 				e.Cancel = true;		//Stopt het sluiten van het formulier.
-			}	
+			}
 			else if (forfeit == DialogResult.Yes) {
 				controller.Forfeit();
-			}						
+			}
+		}
+
+		private void cheat_Click(object sender, EventArgs e)
+		{
+			controller.Cheat();
 		}
 	}
 }

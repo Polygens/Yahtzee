@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿﻿using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace Yahtzee
+﻿namespace Yahtzee
 {
 	public class YahtzeeController
 	{
@@ -58,6 +58,14 @@ namespace Yahtzee
 			{
 				model.Teerlingen[i].getView().SetText();
 				scoreboard.ChangeScore(i, model.Teerlingen[i].model.AantalOgen);
+			}
+		}
+
+		public void Cheat()
+		{
+			for (int i = 0; i < model.AantalTeerlingen; i++)
+			{
+				model.Teerlingen[i].getView().MakeButtonsVisible();
 			}
 		}
 

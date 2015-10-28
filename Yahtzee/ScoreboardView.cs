@@ -29,6 +29,7 @@ namespace Yahtzee
 			Control ctn = Scoresheet.Controls[name];
 			ctn.BackColor = Color.Transparent;
 			ctn.ForeColor = Color.DarkGray;
+			ctn.Click -= scoresheetClick;
 			ctn.Click += scoresheetClick;
 		}
 
