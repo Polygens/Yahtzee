@@ -76,8 +76,15 @@ namespace Yahtzee
         teerlingen[i].getView().AbleThrow();
 
 			}
+    }
 
+    public void Cheat()
+    {
+      for (int i = 0; i < aantalTeerlingen; i++)
+      {
+        teerlingen[i].getView().MakeButtonsVisible();
 
+      }
     }
 	}
 }
