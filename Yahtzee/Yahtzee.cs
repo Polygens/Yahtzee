@@ -14,7 +14,7 @@ namespace Yahtzee
 			MakeScoreboard();
 			this.Location = new System.Drawing.Point((int)(this.Width * (controller.model.PlayerNumber / 5.0f)), (int)(this.Height * (controller.model.PlayerNumber / 5.0f)));
 			this.StartPosition = FormStartPosition.Manual; //Gebruikt de Location om de startpositie van het scherm te bepalen.
-			this.Text = "Player " + (controller.model.PlayerNumber + 1); 			
+			this.Text = "Player " + (controller.model.PlayerNumber + 1);
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -35,18 +35,14 @@ namespace Yahtzee
 			flowLayoutPanel1.Controls.Add(scoreView);
 		}
 
-    private void refresh_Click(object sender, EventArgs e)
-    {
-      controller.RefreshGame();
-    }
+		private void refresh_Click(object sender, EventArgs e)
+		{
+			controller.RefreshGame();
+		}
 
-    private void cheat_Click(object sender, EventArgs e)
-    {
-      controller.Cheat();
-    }
-
-
-
-
+		private void cheat_Click(object sender, EventArgs e)
+		{
+			controller.Cheat();
+		}
 	}
 }

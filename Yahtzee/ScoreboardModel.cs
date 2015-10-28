@@ -165,13 +165,11 @@
 		public string[] LabelNamesArr_LowerSection
 		{
 			get { return labelNamesArr_LowerSection; }
-			set { labelNamesArr_LowerSection = value; }
 		}
 
 		public string[] LabelNamesArr_UpperSection
 		{
 			get { return labelNamesArr_UpperSection; }
-			set { labelNamesArr_UpperSection = value; }
 		}
 	}
 }

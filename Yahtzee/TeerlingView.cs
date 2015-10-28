@@ -38,7 +38,9 @@ namespace Yahtzee
 
 		public void AbleThrow()
 		{
+
 			controller.Losmaken();
+
 			TeerlingLabel.ForeColor = controller.model.KleurTeerling;
 			if (controller.model.isBtnVisible)
 			{
