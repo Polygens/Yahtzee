@@ -8,7 +8,7 @@ namespace Yahtzee
 {
 	public class ScoreboardGlobalPlayerModel
 	{
-		 private int playerNumber = 0;
+		private int playerNumber = 0;
 		private int score = 0;
 		private bool win = false;
 

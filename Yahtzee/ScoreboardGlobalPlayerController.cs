@@ -4,11 +4,11 @@
 	{
 		private ScoreboardGlobalPlayerView view;
 		public ScoreboardGlobalPlayerModel model;
-		private YahtzeeStart yahtzeeStart;   //Gebruik dit wel momenteel niet!
+		private YahtzeeStart yahtzeeStart; 
 
 		public ScoreboardGlobalPlayerController(int i, YahtzeeStart ys)
 		{
-			model = new ScoreboardGlobalPlayerModel(); //Moet voor de view worden aangemaakt in dit geval.
+			model = new ScoreboardGlobalPlayerModel(); 
 			model.PlayerNumber = i;
 			view = new ScoreboardGlobalPlayerView(this);
 			yahtzeeStart = ys;
@@ -22,7 +22,7 @@
 		public void KeepingScore()
 		{
 			int Plnumber = model.PlayerNumber;
-			model.Score = yahtzeeStart.yahtzeeControl[Plnumber].GetScoreContr().model.Score;
+			model.Score = yahtzeeStart.yahtzeeControl[Plnumber].GetScoreContr().model.Score; //Haalt via de YahtzeeStart, via de correcte YahtzeeController het Scoreboard op en haalt dan de score van de speler via het model.
 			view.UpdateScore();
 		}
 	}

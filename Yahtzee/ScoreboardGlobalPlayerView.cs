@@ -21,16 +21,7 @@ namespace Yahtzee
 
 		public void WinOrLoseChangeText()
 		{
-			//if (controller.model.Win)
-			//{
-				winLoseLabel.Text = "Winner!";
-			//}
-			//else
-			//{
-			//	winLoseLabel.Text = "Lose";
-			//}
-			winLoseLabel.Visible = true;
-			
+				winLoseLabel.Text = "Winner!";	
 		}
 
 	}
