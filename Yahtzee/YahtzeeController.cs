@@ -1,3 +1,6 @@
+﻿﻿using System.Collections.Generic;
+using System.Windows.Forms;
+
 ﻿namespace Yahtzee
 {
 	public class YahtzeeController
@@ -29,7 +32,7 @@
 			}
 		}
 
-		public YahtzeeView getView()
+		public YahtzeeView getView() 
 		{
 			return view;
 		}
@@ -75,6 +78,12 @@
 			{
 				model.Teerlingen[i].getView().AbleThrow();
 			}
+		}
+
+		public void Forfeit()
+		{
+				model.Playing = false;
+				startController.CheckEndGame();
 		}
 	}
 }

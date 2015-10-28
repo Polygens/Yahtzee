@@ -29,6 +29,7 @@ namespace Yahtzee
 		/// </summary>
 		private void InitializeComponent()
 		{
+
       this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
       this.button1 = new System.Windows.Forms.Button();
       this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -102,6 +103,7 @@ namespace Yahtzee
       this.Controls.Add(this.flowLayoutPanel1);
       this.Name = "YahtzeeView";
       this.Text = "Player";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CloseForm);
       this.flowLayoutPanel1.ResumeLayout(false);
       this.flowLayoutPanel1.PerformLayout();
       this.ResumeLayout(false);

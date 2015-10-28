@@ -52,7 +52,7 @@ namespace Yahtzee
 				yahtzeeController.model.Teerlingen[i].Losmaken();
             }
 			yahtzeeController.ScoreChangedAll();
-			model.AmntOfRounds++;   //Even vlug erbij gezet.
+			model.AmntOfRounds++;
 			EndingGame();
 		}
 
@@ -302,7 +302,8 @@ namespace Yahtzee
 			model.YahtzeeSc = 0;
 			model.Chance = 0;
 			UpdateTotalScores();
-            view.ChangeText();
+      view.ChangeText();
+			model.AmntOfRounds = 0;
 		}
 	}
 }

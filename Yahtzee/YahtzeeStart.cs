@@ -18,6 +18,7 @@ namespace Yahtzee {
 		private void startGame_Click(object sender, EventArgs e)
 		{
 			if (!playing) {
+				Restart();  //Bij herstart moeten enkele dingen verwijderd worden.
 				if (Int32.TryParse(numberInput.Text, out amountOfPlayers)) //Als je geen geldig nummer intypt, speel je alleen.
 				{
 					if (amountOfPlayers > 5) //Max. aantal spelers is 5
@@ -31,8 +32,7 @@ namespace Yahtzee {
 					amntLabel.Text = "You have chosen " + amountOfPlayers + " player.";
 				}
 			
-
-			for (int i = 0; i < amountOfPlayers; i++) {
+			for (int i = 0; i < amountOfPlayers; i++) {  //Yahtzees worden aangemaakt per speler.
 				yahtzeeControl.Add(new YahtzeeController(i, this));
 				AddScoreboardPlayer();
 			}
@@ -40,17 +40,17 @@ namespace Yahtzee {
 		}
 		}
 
-		public void AddScoreboardPlayer()
+		public void AddScoreboardPlayer() //Elke speler krijgt een persoonlijke scoreboard.
 		{
 			for (int i = 0; i < amountOfPlayers; i++) {
 				scoreboardControl.Add(new ScoreboardGlobalPlayerController(i, this));
 				ScoreboardGlobalPlayerView scoreboardView = scoreboardControl[i].getView();
-				scoreboardView.Location = new System.Drawing.Point(i * scoreboardView.Width, 150);
+				scoreboardView.Location = new System.Drawing.Point(i * scoreboardView.Width, 150); 
 				scoreTablePl.Controls.Add(scoreboardView);
 			}
 		}
 
-		public void DecideWinOrLose()
+		public void DecideWinOrLose() //De speler met de hoogste score krijgt een tekst erbij dat hij gewonnen heeft.
 		{
 			if (amountOfPlayers > 1) {
 				int highestScore = 0;
@@ -67,23 +67,29 @@ namespace Yahtzee {
 			}
 		}
 
-		public void CheckEndGame()
+		public void CheckEndGame()  //Er wordt gecheckt of er nog andere spelers aan het spelen zijn. Indien niet, dan wordt bepaalt wie er wint en kan je terug op de Startknop duwen.
 		{
 			for (int i = 0; i < amountOfPlayers; i++) {
 				if (yahtzeeControl[i].model.Playing) {
-					return;
+						return;
 				}
 			}
 			DecideWinOrLose();
 			playing = false;
 
-			for (int i = 0; i < amountOfPlayers; i++) {
+			for (int i = 0; i < amountOfPlayers; i++) { //Alle YahtzeeControllers verdwijnen en worden verwijderd uit de lijst.
 				yahtzeeControl[i].getView().Hide();
-				Controls.Remove(yahtzeeControl[i].getView()); //Nodig?
-				yahtzeeControl[i] = null; //Verwijdert YahtzeeController uit lijst.
-				//Dispose(true);  //Verwijdert alles. Voor exit knop?
 			}
+			yahtzeeControl.Clear(); 
 		}
 
+		private void Restart()  //Alle eerder gemaakte Player scoreboards verdwijnen bij herstart.
+		{
+				for (int i = 0; i < amountOfPlayers; i++) {
+				scoreboardControl[i].getView().Hide();
+				}
+				scoreboardControl.Clear();
+		}
 	}
 }
+
