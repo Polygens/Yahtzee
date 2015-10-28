@@ -55,5 +55,59 @@ namespace Yahtzee
 		{
 			label1.Text = "Teerling: " + (controller.model.IndexOfTeerling + 1);
 		}
+
+
+    //cheat knoppen verschijnen
+    public void MakeButtonsVisible()
+    {
+
+        nr1.Show();
+        nr2.Show();
+        nr3.Show();
+        nr4.Show();
+        nr5.Show();
+        nr6.Show();
+        
+    }
+
+    // cheat knop waarde doorgeven
+    public void CheatButtonValue(Button btn)
+    {
+      TeerlingLabel.Text = btn.Text;
+      SetText();
+    
+    }
+
+    private void nr1_Click(object sender, EventArgs e)
+    {
+      CheatButtonValue(nr1);
+    }
+
+    private void nr2_Click(object sender, EventArgs e)
+    {
+      CheatButtonValue(nr2);
+    }
+
+    private void nr3_Click(object sender, EventArgs e)
+    {
+      CheatButtonValue(nr3);
+    }
+
+    private void nr4_Click(object sender, EventArgs e)
+    {
+      CheatButtonValue(nr4);
+    }
+
+    private void nr5_Click(object sender, EventArgs e)
+    {
+      CheatButtonValue(nr5);
+    }
+
+    private void nr6_Click(object sender, EventArgs e)
+    {
+      CheatButtonValue(nr6);
+    }
+
+
 	}
 }

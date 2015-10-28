@@ -33,6 +33,7 @@ namespace Yahtzee
       this.button1 = new System.Windows.Forms.Button();
       this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
       this.refresh = new System.Windows.Forms.Button();
+      this.cheat = new System.Windows.Forms.Button();
       this.flowLayoutPanel1.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -42,6 +43,7 @@ namespace Yahtzee
       this.flowLayoutPanel1.Controls.Add(this.button1);
       this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
       this.flowLayoutPanel1.Controls.Add(this.refresh);
+      this.flowLayoutPanel1.Controls.Add(this.cheat);
       this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
       this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
       this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -80,6 +82,17 @@ namespace Yahtzee
       this.refresh.Text = "Restart";
       this.refresh.Click += new System.EventHandler(this.refresh_Click);
       // 
+      // cheat
+      // 
+      this.cheat.FlatAppearance.BorderSize = 0;
+      this.cheat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.cheat.Location = new System.Drawing.Point(3, 67);
+      this.cheat.Name = "cheat";
+      this.cheat.Size = new System.Drawing.Size(75, 21);
+      this.cheat.TabIndex = 2;
+      this.cheat.UseVisualStyleBackColor = true;
+      this.cheat.Click += new System.EventHandler(this.cheat_Click);
+      // 
       // YahtzeeView
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,6 +115,7 @@ namespace Yahtzee
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     private System.Windows.Forms.Button refresh;
+    private System.Windows.Forms.Button cheat;
 	}
 }
 

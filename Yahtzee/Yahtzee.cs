@@ -40,6 +40,13 @@ namespace Yahtzee
       controller.RefreshGame();
     }
 
+    private void cheat_Click(object sender, EventArgs e)
+    {
+      controller.Cheat();
+    }
+
+
+
 
 	}
 }
